@@ -1,0 +1,555 @@
+/*--------------------------------
+Global CSS
+--------------------------------*/
+
+/* Global stuff */
+
+body,html {
+	font-family:"Open Sans", "Montserrat", sans-serif;
+	margin:0;
+	padding:0;
+	line-height:1.5;
+	font-weight:400;
+	font-size:16px;
+}
+
+
+
+p {
+	line-height: 1.5;
+}
+
+section {
+	overflow:hidden;
+}
+
+button, .button {
+	border:none;
+	border-radius:5px;
+	background:#37039f;
+	color:white;
+	font-size:16px;
+	padding:12px 2em;
+	cursor:pointer;
+	margin:1em 0;
+}
+
+.clickable-button {
+	border-bottom:4px solid #37039f;
+}
+
+.clickable-button:hover {
+	background:#6a43b7;
+}
+
+.clickable-button:active {
+		border-bottom:4px solid #6a43b7;
+		transform:scale(0.5);
+}
+
+.container {
+	width:80%;
+	max-width: 1200px;
+	margin:auto;
+	height:100%;
+}
+
+.large-container {
+	width:90%;
+	max-width:1200px;
+	margin:auto;
+	height:100%;
+}
+
+.main-column {
+	background:white;
+	border-radius:10px;
+	box-shadow:0 1px 3px rgba(0,0,0,0.4);
+	padding:1em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0.75em 0 0.5em 0;
+}
+
+a {
+	text-decoration:none;
+}
+
+a button {
+	color:white;
+	font-size:30px;
+}
+
+.flex-container {
+	display: block;
+	height: 100%;
+}
+
+@media only screen and (min-width:420px) {
+.flex-container {
+	display:flex;
+	justify-content:space-between;
+	height:100%;
+	align-items: center;
+	flex-flow: row wrap;
+}
+}
+
+/*--------------------------------
+header
+--------------------------------*/
+
+header {
+    /* background-color: rgba(255,255,255,0.0); */
+		/* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3),transparent); */
+		background-color: white;
+		color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+		box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+header div.container {
+	height:100%;
+	width: 100%;
+}
+
+header nav {
+	height:100%;
+	display:flex;
+	justify-content: space-between;
+	align-content:center;
+	text-decoration:none;
+	text-align:center;
+	text-transform:lowercase;
+}
+
+header nav ul {
+	list-style:none;
+	height:100%;
+	margin: auto;
+	padding:0;
+	display: block;
+}
+
+header nav ul li {
+	display:table;
+	height:100%;
+	float:left;
+}
+
+header nav ul li a {
+	font-family:Comfortaa;
+	font-size:1em;
+	color: #999;
+	/* display: table-cell;
+	vertical-align:middle; */
+	padding:0 40px;
+	height:100%;
+	transition:200ms;
+}
+
+header nav ul li a:hover {
+	color:#D885FF;
+	transform:scale(1.2);
+}
+
+header nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+header nav #menu-logo img {
+	height:80px;
+}
+
+header nav .main-nav-active {
+	color: #c74fff;
+}
+
+/*----------------------------------------------
+Horizontal tabs menu
+----------------------------------------------*/
+.tabs {
+	margin-top:100px;
+	font-family: comfortaa;
+	text-transform: lowercase;
+}
+
+.tabs .flex-container {
+	justify-content: center;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.tabs .page-title h1 {
+	font-size:1.5em;
+	color:#5e5e5e;
+	font-weight:400;
+	margin:0;
+}
+
+.tabs .flex-container .page-title {
+	flex:1;
+	align-self:flex-end;
+	padding-bottom: 0.5em;
+}
+
+.tabs .flex-container .tabs-items-container {
+	flex:7;
+	text-align:center;
+	align-self: flex-end;
+}
+
+.tabs .flex-container .flex-fill {
+	flex:0;
+}
+
+@media only screen and (min-width: 1200px) {
+.tabs .flex-container .flex-fill {
+	flex:1;
+	}
+}
+
+.tabs .tabs-items {
+	padding-top:20px;
+	height:100%;
+	list-style: none;
+	text-align:center;
+	display: inline;
+	font-size:1em;
+	padding:0;
+}
+
+.tabs .tabs-items li {
+	display: inline-block;
+
+}
+
+.tabs .tabs-items li a {
+	display: block;
+	margin:0 2em;
+	margin-bottom: -1px;
+	padding-bottom: 1em;
+	text-transform: lowercase;
+	border-bottom: 1px solid #e6e6e6;
+	color:#cccccc;
+	transition: .25s;
+	cursor: pointer;
+}
+
+.tabs .tabs-items .active-tab {
+	border-bottom: 1px solid #c74fff;
+}
+
+.tabs .tabs-items a:hover {
+	border-bottom: 1px solid #c74fff;
+	color:#c74fff;
+}
+
+/* --- tab content --- */
+
+/* Fading effect */
+.tabcontent {
+  animation: fadeEffect 1.0s;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.tabcontent {
+	margin: 50px 0;
+}
+
+.tabcontent #discover.flex-container {
+	align-items: flex-start;
+}
+
+.tabcontent p {
+	color: #666;
+	font-size: 1em;
+	line-height: 1.8;
+	font-family: sans-serif;
+}
+
+.tabcontent h2 {
+	font-family: 'Montserrat';
+	font-weight: 900;
+	font-size: 2.5em;
+	margin-top: 0;
+	font-weight: 600;
+	color: #333;
+}
+
+.tabcontent #overview-text {
+	flex-basis: calc(50% - 50px);
+	padding-right: 50px;
+}
+
+.tabcontent #overview-video {
+	flex-basis: 50%;
+}
+
+.tabcontent #approach {
+	padding-top: 100px;
+	width: 66.7%;
+	margin: auto;
+}
+
+.tabcontent #approach h2 {
+	text-align: center;
+}
+
+.tabcontent #process {
+	margin-top: 100px;
+}
+
+.tabcontent #process .process-box-container {
+	flex-basis: 29%;
+	overflow: hidden;
+}
+
+.tabcontent #process h2 {
+	margin: 0.5em 0;
+	text-align: center;
+}
+
+.tabcontent #process .process-box-container .process-box-content {
+
+}
+
+.tabcontent #process .process-box-container img {
+	width: 400px;
+	height: 250px;
+}
+
+
+/* --- About page --- */
+
+/* Our story */
+
+#ourStory #our-story-image {
+	flex-basis: 30%;
+}
+
+#ourStory #our-story-image img {
+	border-radius: 10px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+#ourStory #our-story-text {
+	flex-basis: 60%;
+	align-self: flex-start;
+}
+
+/* standout text */
+
+.standout {
+	min-height: 400px;
+}
+
+#our-vision.standout {
+	color: white;
+	background-image: url('..img/night-sky.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+/*----------------------------------------------
+Footer
+----------------------------------------------*/
+
+footer {
+	margin-top: 70vh;
+}
+
+footer {
+	color: white;
+	text-align: center;
+	clear: both;
+	min-height: 500px;
+	background-image: url('../img/night-sky.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+footer .newsletter {
+	padding: 100px 0;
+}
+
+footer .newsletter h2 {
+	margin: 0;
+	font-size: 3em;
+	text-shadow: 1px 1px 1px #222;
+}
+
+footer .newsletter input[type="email"] {
+	border:none;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px #222;
+	padding: 0.75em;
+	font-size:1.25em;
+	width: 500px;
+}
+/*----------------------------------------------
+Landing section
+----------------------------------------------*/
+
+#landing-section {
+	background-image:url("../img/purple-mushrooms.jpg");
+	background-position:center;
+	background-size:cover;
+	box-sizing:border-box;
+	/* height:100vh; */
+	min-height:600px;
+	height:calc(100vh - 100px);
+	/*box-shadow:0 0 30px red;*/
+	overflow:hidden;
+	background-attachment: scroll;
+}
+
+@media (min-width:1068px;) {
+	section#landing-section {
+		min-height:750px;
+	}
+}
+
+#landing-section .background-overlay {
+	height:100%;
+	background-color:rgba(0,0,0,0.3);
+}
+
+#landing-section .container {
+	display:table;
+	height:100%;
+}
+
+#landing-section #landing-content {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	color:white;
+}
+
+#landing-section #landing-content h1 {
+	font-size:90px;
+	font-family:Montserrat;
+	font-weight:900;
+	font-style:normal;
+	text-transform: uppercase;
+	margin:0;
+}
+
+#landing-section #landing-content h3 {
+	font-family: comfortaa;
+	font-size:26px;
+	font-weight:300;
+	text-transform: lowercase;
+	margin:0 0 0.5em 0;
+}
+
+
+#landing-button {
+	margin-top:1em;
+	border-radius:50px;
+	padding:2em 6em;
+	font-size: 12px;
+	text-transform:uppercase;
+	letter-spacing:1.25px;
+}
+
+.section-shadow {
+	height:2px;
+	width:100%;
+	box-shadow:0 0 40px red;
+	position:relative;
+	z-index:2;
+}
+
+/*----------------------------------------------
+Truffles section
+----------------------------------------------*/
+
+.image-text {
+	height:100vh;
+	color:white;
+	font-size: 20px;
+}
+
+.image-text .flex-container p {
+	margin-bottom:2em;
+}
+
+.image-text .flex-container h2 {
+	font-family: Montserrat;
+	font-size: 2.5em;
+	font-weight: 600;
+}
+
+.image-text .background-overlay {
+	height:100%;
+	background-color:rgba(0,0,0,0.5);
+}
+
+.image-text .flex-container div {
+	flex-basis:45%;
+}
+
+#truffles.image-text {
+	background:url('../img/truffles2.jpg');
+	background-size:cover;
+	background-position:right;
+	background-attachment: scroll;
+	box-shadow: inset 0 55vh 50vh -50vh rgba(0,0,0,0.5);
+}
+
+#experience.image-text {
+	background:url('../img/experience.jpg');
+	background-size:cover;
+	background-position:right;
+	background-attachment: scroll;
+	text-align:right;
+}
+
+.background-image {
+	padding:200px;
+}
+
+
+
+
+
+
+/* Vertical alignment with table*/
+
+/* section#truffles div.container {
+	display:table;
+	height:100%;
+}
+
+section#truffles div.flex-container {
+	display:table-cell;
+	vertical-alignment:middle;
+} */
+
+
+
+/* Tutorial area */
+
+section#tutorial {
+	min-height:50vh;
+	border:10px solid #dddddd;
+	background:#dddddd;
+	padding:2em 0;
+}
