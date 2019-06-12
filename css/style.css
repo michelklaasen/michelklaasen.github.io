@@ -178,14 +178,26 @@ header nav .main-nav-active {
 Horizontal tabs menu
 ----------------------------------------------*/
 .tabs {
-	margin-top:100px;
+	margin-top: 3rem;
 	font-family: comfortaa;
 	text-transform: lowercase;
 }
 
+@media (min-width: 1200px) {
+	.tabs {
+		margin-top: 8rem;
+	}
+}
+
 .tabs .flex-container {
-	justify-content: center;
+	justify-content: flex-start;
 	border-bottom: 1px solid #e6e6e6;
+}
+
+@media (min-width: 800px) {
+	.tabs .flex-container {
+		justify-content: center;
+	}
 }
 
 .tabs .page-title h1 {
@@ -196,52 +208,73 @@ Horizontal tabs menu
 }
 
 .tabs .flex-container .page-title {
-	flex:1;
-	align-self:flex-end;
-	padding-bottom: 0.5em;
+	flex-basis: 100%;
+	align-self: center;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 1200px) {
+	.tabs .flex-container .page-title {
+		flex-basis: auto;
+		flex: 1;
+		padding-bottom: 0.5em;
+		text-align: left;
+		margin: 0;
+	}
 }
 
 .tabs .flex-container .tabs-items-container {
-	flex:7;
-	text-align:center;
+	flex: 7;
+	text-align: center;
 	align-self: flex-end;
+	margin-bottom: -1px;
 }
 
 .tabs .flex-container .flex-fill {
-	flex:0;
+	flex: 0;
 }
 
-@media only screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
 .tabs .flex-container .flex-fill {
-	flex:1;
+	flex: 1;
 	}
 }
 
 .tabs .tabs-items {
-	padding-top:20px;
-	height:100%;
+	padding-top: 20px;
+	height: 100%;
 	list-style: none;
-	text-align:center;
+	text-align: center;
 	display: inline;
-	font-size:1em;
-	padding:0;
+	font-size: 1em;
+	padding: 0;
+	/* Let it scroll, let it scroll */
+	overflow: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch; /* [3] */
+	-ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .tabs .tabs-items li {
 	display: inline-block;
-
 }
 
 .tabs .tabs-items li a {
 	display: block;
-	margin:0 2em;
-	margin-bottom: -1px;
+	margin:0 1em;
 	padding-bottom: 1em;
 	text-transform: lowercase;
 	border-bottom: 1px solid #e6e6e6;
 	color:#cccccc;
 	transition: .25s;
 	cursor: pointer;
+}
+
+@media (min-width: 800px) {
+	.tabs .tabs-items li a {
+		margin: 0 2em;
+	}
 }
 
 .tabs .tabs-items .active-tab {
