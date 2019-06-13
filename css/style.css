@@ -252,7 +252,7 @@ Horizontal tabs menu
 	/* Let it scroll, let it scroll */
 	overflow: auto;
 	white-space: nowrap;
-	-webkit-overflow-scrolling: touch; /* [3] */
+	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
