@@ -1,0 +1,10 @@
+#global-burger {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 64px;
+  height: 64px;
+  background: white;
+  border-radius: 200px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}

@@ -9,12 +9,28 @@
   <title>Learn | Truffles Therapy</title>
   <!-- CSS -->
   <link rel="stylesheet" type-"text/css" href="css/style.css">
+  <link rel="stylesheet" type-"text/css" href="css/mobile-nav.css">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header & Co -->
-  <header>
+  <div id="global-burger">
+    <div class="burger-container">
+      <div class="burger">
+        <div class="burger-line burger-line-top"></div>
+        <div class="burger-line burger-line-middle"></div>
+        <div class="burger-line burger-line-bottom"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Top header navigation -->
+  <header id="top-nav">
     <div class="container">
       <nav>
         <div id="menu-left">
@@ -43,19 +59,20 @@
 
 
   <!-- Horizontal tabs menu -->
-  <section class="tabs">
+  <section id="tabs" class="x-scroll">
     <div class="large-container">
       <div class="flex-container">
         <div class="page-title">
           <h1>Learn</h1>
         </div>
-        <div class="tabs-items-container">
-          <ul class="tabs-items">
-            <li><a  id="default-tab" class="tablinks" onclick="openTab(event, 'Truffles')">Truffles & Mushrooms</a></li>
-            <li><a class="tablinks" onclick="openTab(event, 'History')">History</a></li>
-            <li><a class="tablinks" onclick="openTab(event, 'Resources')">Resources</a></li>
-            <li><a class="tablinks" onclick="openTab(event, 'Research')">Research</a></li>
-            <li><a class="tablinks" onclick="openTab(event, 'FAQ')">FAQ</a></li>
+        <div class="tabs-items-container scroll-wrapper">
+          <ul class="tabs-items scroll-inner">
+            <li><a  id="default-tab" class="tablinks" onclick="openTab(event, 'Overview')">Overview</a></li>
+            <li><a class="tablinks" onclick="openTab(event, 'Group')">Group</a></li>
+            <li><a class="tablinks" onclick="openTab(event, 'Private')">Private</a></li>
+            <li><a class="tablinks" onclick="openTab(event, 'Testimonials')">Testimonials</a></li>
+            <li><a class="tablinks" onclick="openTab(event, 'Gallery')">Gallery</a></li>
+            <li><a class="tablinks" onclick="openTab(event, 'Press')">Press</a></li>
           </ul>
           </div>
         <div class="flex-fill">
@@ -67,8 +84,8 @@
 
   <section>
     <div class="large-container">
-      <!-- Truffles & Mushrooms tab -->
-      <div id="Truffles" class="tabcontent">
+      <!-- Overview tab -->
+      <div id="Overview" class="tabcontent">
         <div id="discover" class="flex-container">
           <div id="overview-text">
             <h2>Discover Yourself</h2>
@@ -108,28 +125,35 @@
       </div>
 
       <!-- Group retreats tab -->
-      <div id="History" class="tabcontent">
-        <h2 class="headline">History</h2>
-        <p>About History retreats.</p>
+      <div id="Group" class="tabcontent">
+        <h2 class="headline">Group</h2>
+        <p>About group retreats.</p>
       </div>
 
-      <!-- Resources retreats tab -->
-      <div id="Resources" class="tabcontent">
-        <h2 class="headline">Resources</h2>
-        <p>About Resources retreats.</p>
+      <!-- Private retreats tab -->
+      <div id="Private" class="tabcontent">
+        <h2 class="headline">Private</h2>
+        <p>About private retreats.</p>
       </div>
 
-      <!-- Research retreats tab -->
-      <div id="Research" class="tabcontent">
-        <h2 class="headline">Research</h2>
-        <p>Lots of Research.</p>
+      <!-- Testimonials retreats tab -->
+      <div id="Testimonials" class="tabcontent">
+        <h2 class="headline">Testimonials</h2>
+        <p>Lots of testimonials.</p>
       </div>
 
-      <!-- FAQ retreats tab -->
-      <div id="FAQ" class="tabcontent">
-        <h2 class="headline">FAQ</h2>
+      <!-- Gallery retreats tab -->
+      <div id="Gallery" class="tabcontent">
+        <h2 class="headline">Gallery</h2>
         <p>Lots of pictures.</p>
       </div>
+
+      <!-- Press retreats tab -->
+      <div id="Press" class="tabcontent">
+        <h2 class="headline">Press</h2>
+        <p>Lots of press.</p>
+      </div>
+
 
     </div>
   </section>
@@ -147,31 +171,55 @@
 
 </footer>
 
-<!-- Transition debug script -->
-<script> </script>
+<!-- Horizontal scrolling script -->
+<script>
+(function () {
+  var scrollEl = document.querySelector('.x-scroll .scroll-inner')
+  var scr = new ScrollBooster({
+    viewport: document.querySelector('.x-scroll .scroll-wrapper'),
+    emulateScroll: true,
+    mode: 'x',
+    onUpdate: function (data) {
+      scrollEl.style.transform = 'translate(' + -data.position.x + 'px, ' + -data.position.y + 'px)'
+    }
+  })
+  scr.setPosition({
+    x: 0
+  })
+
+})()
+</script>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Mobile hamburger opener -->
+<script>
+$(document).ready(function(){
+   $(".burger-container,.sb-container").click(function(){
+       $(".burger,#sidebar-nav").toggleClass('open');
+   });
+});
+</script>
 
 <!-- Horizontal tabs script start -->
 <script>
 function openTab(evt, tabName) {
-  // Declare all variables
   var i, tabcontent, tablinks;
-  // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  // Get all elements with class="tablinks" and remove the class "active-tab"
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
   }
-  // Show the current tab, and add an "active-tab" class to the button that opened the tab
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active-tab";
 }
-  // Autoclick overview tab
 document.getElementById("default-tab").click();
 </script>
-<!-- Horizontal tabs script end -->
+<!-- Transition debug script -->
+<script> </script>
 </body>
 </html>
