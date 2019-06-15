@@ -25,6 +25,7 @@
   background-color: white;
   transform: translateX(100vw);
   opacity: 0;
+  -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
 }
 
