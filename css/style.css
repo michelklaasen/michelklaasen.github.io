@@ -110,7 +110,7 @@ Navigation
 #mnav {
 	position: fixed;
 	bottom: 0;
-	width: 100%;
+	width: 100vw;
 	background: white;
 	height: 60px;
 	overflow: hidden;
@@ -162,11 +162,7 @@ Navigation
 	margin: .5em 0 0 0;
 }
 
-
-
-
 /* Hamburger  */
-
 #mnav .burger-container .burger {
 	display: flex;
 	flex-flow: column nowrap;
@@ -604,7 +600,7 @@ footer .newsletter input[type="email"] {
 	box-shadow: 2px 2px 3px #222;
 	padding: 0.75em;
 	font-size:1.25em;
-	width: 500px;
+	width: 70%;
 }
 /*----------------------------------------------
 Landing section
