@@ -116,14 +116,14 @@
 
 
   <!-- Horizontal tabs menu -->
-  <section class="tabs">
+  <section id="tabs" class="x-scroll">
     <div class="large-container">
       <div class="flex-container">
         <div class="page-title">
           <h1>Retreats</h1>
         </div>
-        <div class="tabs-items-container">
-          <ul class="tabs-items">
+        <div class="tabs-items-container scroll-wrapper">
+          <ul class="tabs-items scroll-inner">
             <li><a  id="default-tab" class="tablinks" onclick="openTab(event, 'Overview')">Overview</a></li>
             <li><a class="tablinks" onclick="openTab(event, 'Group')">Group</a></li>
             <li><a class="tablinks" onclick="openTab(event, 'Private')">Private</a></li>
@@ -227,6 +227,25 @@
   </div>
 
 </footer>
+
+<!-- Horizontal scrolling script -->
+<script>
+(function () {
+  var scrollEl = document.querySelector('.x-scroll .scroll-inner')
+  var scr = new ScrollBooster({
+    viewport: document.querySelector('.x-scroll .scroll-wrapper'),
+    emulateScroll: true,
+    mode: 'x',
+    onUpdate: function (data) {
+      scrollEl.style.transform = 'translate(' + -data.position.x + 'px, ' + -data.position.y + 'px)'
+    }
+  })
+  scr.setPosition({
+    x: 0
+  })
+
+})()
+</script>
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
