@@ -11,12 +11,12 @@
 }
 
 #global-burger .burger-line {
-  background-color: #999;
+  background-color: #37039f;
 }
 
 
 #fullscreen-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -25,6 +25,7 @@
   background-color: white;
   transform: translateX(100vw);
   opacity: 0;
+  -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
 }
 
