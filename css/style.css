@@ -13,8 +13,9 @@ body,html {
 	font-size:16px;
 }
 
-html {
+body {
 	overflow-x: hidden;
+	max-width: 100vw;
 }
 
 
@@ -29,13 +30,24 @@ section {
 
 button, .button {
 	border:none;
-	border-radius: 5px;
+	border-radius: 10px;
 	background: #37039f;
 	color: white;
 	font-size: 16px;
 	padding: 12px 2em;
 	cursor: pointer;
 	margin:1em 0;
+	/* box-shadow: 0 1px 1px .5px rgba(55,3,159,0.8); */
+	opacity: 0.75;
+	transition: .2s;
+}
+
+button:hover, .button:hover {
+	opacity: 1;
+}
+
+a.button {
+	display: inline-block;
 }
 
 .clickable-button {
@@ -743,30 +755,97 @@ Truffles section
 	padding:200px;
 }
 
-
-
-
-
-
-/* Vertical alignment with table*/
-
-/* section#truffles div.container {
-	display:table;
-	height:100%;
+/* About truffles section V2 Mobile first */
+.side-image-section {
+	height: 100vh;
+	overflow: hidden;
 }
 
-section#truffles div.flex-container {
-	display:table-cell;
-	vertical-alignment:middle;
-} */
-
-
-
-/* Tutorial area */
-
-section#tutorial {
-	min-height:50vh;
-	border:10px solid #dddddd;
-	background:#dddddd;
-	padding:2em 0;
+.side-image-section .flex-container {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
 }
+
+.side-image-section .side-image {
+	width: 100%;
+	max-width: 500px;
+	max-height: 40vh;
+	min-height: 15vh;
+	height: auto;
+	border-radius: 10px;
+	margin-top: 2em;
+}
+
+.side-image-section .section-title {
+	margin: 0;
+	font-family: montserrat;
+	font-weight: 700;
+	text-align: center;
+	font-size: 2em;
+}
+
+.side-image-section .section-text {
+	margin: 1em 0;
+}
+
+.side-image-section .button {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.75em;
+}
+
+@media (min-width: 800px) {
+	.side-image-section {
+		height: auto;
+		padding: 20vh 0;
+	}
+
+	.side-image-section .flex-container {
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+	.side-image-section .column {
+		flex-basis: 48%;
+	}
+	/* .side-image-section .column-image {
+		height: 50vh;
+		background: white url('../img/truffles2.jpg') no-repeat scroll center;
+		background-size: cover;
+		border-radius: 10px;
+	} */
+	.side-image-section .side-image {
+		margin: 0;
+	}
+	.side-image-section .section-title {
+		text-align: left;
+		font-size: 3em;
+	}
+	.side-image-section .button {
+		width: 50%;
+		margin: 0;
+	}
+	.side-image-section .section-text {
+		font-size: 20px;
+	}
+	.side-image-section.side-image-reverse .column-text {
+		order: 2;
+	}
+	.side-image-section.side-image-reverse .section-title, .side-image-section.side-image-reverse .section-text {
+		text-align: right;
+	}
+	.side-image-section.side-image-reverse .button {
+		margin: 0 0 0 auto;
+	}
+}
+
+
+
+
+
+
+
+
+yes
