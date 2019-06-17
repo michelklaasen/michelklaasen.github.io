@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+#main {
+  margin-top: 10vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.link-box {
+  min-width: 350px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 50px;
+  color: #37039f;
+  padding: 1em;
+  margin: .5em;
+  text-align: center;
+}
+
+.link-box:hover {
+  background: #f2f2f2;
+}
+.
