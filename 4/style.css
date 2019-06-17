@@ -1,0 +1,137 @@
+#go-home {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+  background: white;
+  color: #37039f;
+  font-weight: 600;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+#go-home div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#go-home:hover {
+  background-color: #f2f2f2;
+}
+
+body {
+  background: #eee;
+  font-size: 1rem;
+  font-size: 18px;
+  font-size: 16px;
+  font-family: 'Montserrat';
+}
+
+img {
+  height: 50px;
+  height: auto;
+  width: 50px;
+  width: auto;
+}
+
+.active {
+  color: #37039f !important;
+}
+
+.active .bnav-icon {
+  opacity: 1;
+}
+
+
+#bottom-bar {
+  position: fixed;
+  bottom: -160px;
+  left: 0;
+  right: 0;
+  height: 240px;
+  background: #37039f;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.25);
+  transition: .3s ease-in-out;
+}
+
+#bottom-bar.open {
+  transform: translateY(-160px);
+  transition: .3s ease-in-out;
+}
+
+#bottom-bar.open .bnav-layer {
+  height: 120px;
+  transition: .3s ease-in-out;
+}
+
+
+.nav-container {
+  height: 100%;
+}
+
+.bnav-layer {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+}
+
+.bnav-item {
+  color: #444;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: .25s ease-out;
+}
+
+.bnav-item-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+
+.bnav-item:hover {
+  color: #37039f;
+  background-color: #f2f2f2;
+}
+
+.bnav-item:hover .bnav-icon {
+  opacity: 1;
+}
+
+.bnav-icon {
+  opacity: 0.75;
+  display: block;
+  margin: 0 auto;
+  height: 32px;
+  width: auto;
+  filter: brightness(500%);
+  transition: .25s ease-out;
+}
+
+.bnav-text {
+  display: block;
+  margin: .5em auto 0 auto;
+  font-size: 0.9rem;
+}
+
+.bnav-logo {
+  height: 48px;
+  width: auto;
+}

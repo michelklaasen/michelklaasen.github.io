@@ -37,13 +37,8 @@ button, .button {
 	padding: 12px 2em;
 	cursor: pointer;
 	margin:1em 0;
-	/* box-shadow: 0 1px 1px .5px rgba(55,3,159,0.8); */
-	opacity: 0.75;
+	/* box-shadow: 0 1px 1px .5px rgba(55,3,159,0.8); */;
 	transition: .2s;
-}
-
-button:hover, .button:hover {
-	opacity: 1;
 }
 
 a.button {
@@ -195,27 +190,33 @@ Navigation
 	height: 3px;
 	border-radius: 20px;
 	background-color: #222;
-	transition: all .4s ease-in-out;
+	transition: all .3s ease-in-out;
 	transition-delay: .1s;
 }
 
 .burger-container .burger .burger-line-middle {
 	margin: 4px 0;
-	transition: all .1s ease-in-out;
+	transition: all .15s ease-in-out;
+	transition-delay: .3s;
 }
 
 /* Opening the burger */
-.burger-container .burger.open .burger-line-top {
+.burger.open .burger-line-top {
+	-webkit-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
 	transform: rotateZ(45deg);
 }
 
-.burger-container .burger.open .burger-line-bottom {
+.burger.open .burger-line-bottom {
+	-webkit-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
 	transform: rotateZ(-45deg);
 }
 
-.burger-container .burger.open .burger-line-middle {
+.burger.open .burger-line-middle {
 	opacity: 0;
 	margin: -3px 0;
+	transition: all .15s ease-in-out;
 }
 
 /* The sidebar menu */
@@ -229,13 +230,16 @@ Navigation
 	box-shadow: 0 -10px 10px rgba(0,0,0,0.3);
 	z-index: 420420;
 	transition: .3s;
-	transform: translateX(85vw);
 	overflow: hidden;
+	-webkit-transform: translateX(85vw);
+	-ms-transform: translateX(85vw);
+	transform: translateX(85vw);
 }
 
 #sidebar-nav.open {
-	transform: translateX(0);
-}
+	-webkit-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);}
 
 #sidebar-nav .sb-container {
 	display: flex;

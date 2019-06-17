@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Uplifting bottom bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  <body>
+    <a href="../index.html" id="go-home">
+      <div>Home</div>
+    </a>
+
+
+    <!-- Expandable bottom bar mobile navigation start -->
+    <header id="bottom-bar">
+      <nav class="nav-container">
+        <div class="bnav-layer top-layer">
+          <a class="bnav-item active" href="#">
+            <img src="img/icons/plus-icon.png" class="bnav-icon">
+            <div class="bnav-text">Learn</div>
+          </a>
+          <a class="bnav-item" href="#">
+            <img src="img/icons/human-icon.png" class="bnav-icon">
+            <div class="bnav-text">Experience</div>
+          </a>
+          <a class="bnav-item" href="#">
+            <img src="img/icons/settings-icon.png" class="bnav-icon">
+            <div class="bnav-text">Retreats</div>
+          </a>
+          <a id="expand-nav" class="bnav-item expand-nav" href="#">
+            <img src="img/icons/chevron-up.png" class="bnav-icon">
+            <div class="bnav-text">More</div>
+          </a>
+        </div>
+        <div class="bnav-layer bottom-layer">
+          <a class="bnav-item" href="#">
+            <img src="img/icons/browser-icon.png" class="bnav-icon">
+            <div class="bnav-text">About</div>
+          </a>
+          <a class="bnav-item" href="#">
+            <img src="img/icons/attached-icon.png" class="bnav-icon">
+            <div class="bnav-text">Blog</div>
+          </a>
+          <a class="bnav-item" href="#">
+            <img src="img/icons/share-icon.png" class="bnav-icon">
+            <div class="bnav-text">Connect</div>
+          </a>
+
+          <a class="bnav-item" href="index.html">
+            <img src="img/heart-mushroom-logo.png" class="bnav-logo" alt="TrufflesTherapy Logo">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- Expandable bottom bar mobile navigation end -->
+
+
+
+    <h1>Hello</h1>
+
+    <p>Eyyyy</p>
+
+
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+// When the document is ready
+$(document).ready(function(){
+  // And this is clicked
+   $("#expand-nav").click(function(){
+      // The class 'open' of these elements is toggled
+       $("#bottom-bar").toggleClass('open');
+   });
+});
+</script>
+  </body>
+</html>
