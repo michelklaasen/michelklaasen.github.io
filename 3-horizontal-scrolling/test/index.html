@@ -1,0 +1,219 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Scrolling!</title>
+  <link href="./test.css" rel="stylesheet" />
+  <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
+</head>
+
+<body>
+  <a href="../../index.html" id="go-home">
+    <style>
+    #go-home {
+    	position: fixed;
+    	top: 1rem;
+    	right: 1rem;
+    	height: 70px;
+    	width: 70px;
+    	overflow: hidden;
+    	background: white;
+    	color: #37039f;
+    	font-weight: 600;
+    	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    	border-radius: 50px;
+    	text-decoration: none;
+      z-index: 1060;
+    }
+
+    #go-home div {
+    	display: flex;
+    	height: 100%;
+    	align-items: center;
+    	justify-content: center;
+    	text-align: center;
+    }
+
+    #go-home:hover {
+    	background-color: #f2f2f2;
+    }
+    </style>
+    <div>Home</div>
+  </a>
+  <div id="testapp">
+
+    <!-- <h2>Init test</h2>
+
+    <div id="init">
+      <div class="wrapper">
+        <div class="inner">
+          <img src="./bread.jpg" alt="">
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <h2>Scroll test</h2>
+
+    <div id="scroll">
+      <div class="wrapper">
+        <div class="inner">
+          <img src="./bread.jpg" alt="">
+        </div>
+      </div>
+    </div> -->
+
+    <h2>X only</h2>
+
+    <div id="xonly">
+      <div class="wrapper">
+        <div class="inner">
+          <div>
+            <img src="./bread.jpg" alt="">
+          </div>
+          <div>
+            <img src="./bread.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>X only wide with videos</h2>
+
+    <div id="xonly-1" class="video-list">
+      <div class="container">
+        <div class="wrapper">
+          <div class="inner">
+              <div class="video-box">
+                <div class="video-thumbnail-wrapper">
+                  <img src="https://img.youtube.com/vi/LcAj1oxMT9U/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
+                  <div class="video-title">
+                    <p>Our heros</p>
+                    <h3>The Science of Psychedelics - with Michael Pollan</h3>
+                  </div>
+                </div>
+                <div class="video-info-wrapper">
+                  <div class="channel-icon-box">
+                    <img src="https://yt3.ggpht.com/a/AGF-l78u9dcOhqNCSrA2eKwCZ3VsdUspQXBmCItTgw=s48-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
+                  </div>
+                  <div class="video-info">
+                    <h4 class="video-author">Roland Griffiths</h4>
+                    <p class="video-date">Published on 5 Sep 2018</p>
+                  </div>
+                  <div class="sharing-box">
+                    <p><a class="share-text" href="#">Share</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>X only wide with videos</h2>
+
+      <div id="xonly-2" class="video-list">
+        <div class="container">
+          <div class="wrapper">
+            <div class="inner">
+                <div class="video-box">
+                  <div class="video-thumbnail-wrapper">
+                    <img src="https://img.youtube.com/vi/LcAj1oxMT9U/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
+                    <div class="video-title">
+                      <p>Our heros</p>
+                      <h3>The Science of Psychedelics - with Michael Pollan</h3>
+                    </div>
+                  </div>
+                  <div class="video-info-wrapper">
+                    <div class="channel-icon-box">
+                      <img src="https://yt3.ggpht.com/a/AGF-l78u9dcOhqNCSrA2eKwCZ3VsdUspQXBmCItTgw=s48-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
+                    </div>
+                    <div class="video-info">
+                      <h4 class="video-author">Roland Griffiths</h4>
+                      <p class="video-date">Published on 5 Sep 2018</p>
+                    </div>
+                    <div class="sharing-box">
+                      <p><a class="share-text" href="#">Share</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+    <h2>Y only</h2>
+
+    <div id="yonly">
+      <div class="wrapper">
+        <div class="inner">
+          <img src="./bread.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <h2>Without bounce</h2>
+
+    <div id="nobounce">
+      <div class="wrapper">
+        <div class="inner">
+          <img src="./bread.jpg" alt="">
+          <img src="./bread.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="https://unpkg.com/chai@4.1.2/chai.js"></script>
+  <script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
+
+  <script>mocha.setup('bdd')</script>
+
+  <script src="../dist/scrollbooster.js"></script>
+  <script src="init.test.js"></script>
+  <script src="scroll.test.js"></script>
+  <!-- <script src="xonly.test.js"></script> -->
+  <script src="yonly.test.js"></script>
+  <script src="nobounce.test.js"></script>
+
+  <script type="text/javascript">
+  (function () {
+    var scrollEl = document.querySelector('#xonly-1 .inner')
+    var scr = new ScrollBooster({
+      viewport: document.querySelector('#xonly-1 .wrapper'),
+      emulateScroll: true,
+      mode: 'x',
+      onUpdate: function (data) {
+        scrollEl.style.transform = 'translate(' + -data.position.x + 'px, ' + -data.position.y + 'px)'
+      }
+    })
+    scr.setPosition({
+      x: 0
+    })
+
+  })()
+  </script>
+<script>
+  (function () {
+    var scrollEl = document.querySelector('#xonly-2 .inner')
+    var scr = new ScrollBooster({
+      viewport: document.querySelector('#xonly-2 .wrapper'),
+      emulateScroll: true,
+      mode: 'x',
+      onUpdate: function (data) {
+        scrollEl.style.transform = 'translate(' + -data.position.x + 'px, ' + -data.position.y + 'px)'
+      }
+    })
+    scr.setPosition({
+      x: 0
+    })
+
+  })()
+</script>
+
+</body>
+
+</html>

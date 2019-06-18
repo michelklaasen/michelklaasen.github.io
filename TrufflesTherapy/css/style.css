@@ -104,8 +104,10 @@ a button {
 	height:100%;
 	align-items: center;
 	flex-flow: row wrap;
+	}
 }
-}
+
+
 
 /*--------------------------------
 Navigation
@@ -477,28 +479,6 @@ Horizontal tabs menu
 	color:#c74fff;
 }
 
-/* Horizontal scroll */
-
-.x-scroll .scroll-wrapper {
-	/* overflow: hidden; */
-}
-
-.x-scroll .scroll-inner {
-	white-space: nowrap;
-}
-
-/* ---------- tab content --------- */
-
-/* Fading effect */
-/* .tabcontent {
-  animation: fadeEffect 1.0s;
-}
-
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-} */
-
 .tabcontent {
 	margin: 50px 0;
 }
@@ -565,6 +545,16 @@ Horizontal tabs menu
 	height: 250px;
 }
 
+
+/* Horizontal scroll */
+
+.x-scroll .scroll-wrapper {
+	/* overflow: hidden; */
+}
+
+.x-scroll .scroll-inner {
+	white-space: nowrap;
+}
 
 /* --- About page --- */
 
@@ -636,7 +626,7 @@ footer .newsletter input[type="email"] {
 	width: 70%;
 }
 /*----------------------------------------------
-Landing section
+Homepage -Landing section
 ----------------------------------------------*/
 
 #landing-section {
@@ -711,7 +701,7 @@ Landing section
 }
 
 /*----------------------------------------------
-Truffles section
+Homepage - Truffles section
 ----------------------------------------------*/
 
 .image-text {
@@ -845,9 +835,33 @@ Truffles section
 	}
 }
 
+/*----------------------------------------------
+Learn page - resources
+----------------------------------------------*/
 
+.video-section-container {
+	margin: 1rem 0;
+}
 
+.video-section-title-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
 
+.video-section-title {
+	font-family: comfortaa;
+	font-weight: 400;
+	color: #999;
+	text-transform: lowercase;
+}
+
+.view-all {
+	color: #d884ff;
+	font-weight: 400;
+	text-transform: lowercase;
+	font-family: comfortaa;
+}
 
 
 
