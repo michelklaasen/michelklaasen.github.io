@@ -480,7 +480,7 @@ Horizontal tabs menu
 }
 
 .tabcontent {
-	margin: 50px 0;
+	margin: 2rem 0;
 }
 
 .tabcontent #discover.flex-container {
@@ -490,7 +490,7 @@ Horizontal tabs menu
 .tabcontent p {
 	color: #666;
 	font-size: 1em;
-	line-height: 1.8;
+	line-height: 1.5;
 	font-family: sans-serif;
 }
 
@@ -862,6 +862,152 @@ Learn page - resources
 	text-transform: lowercase;
 	font-family: comfortaa;
 }
+
+.videos-container {
+	overflow-x: auto;
+	min-height: 200px;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.video-box {
+	/* background: #d99;
+	border: 2px solid #dd4; */
+	width: auto;
+	margin-right: 1rem;
+}
+
+.video-box:last-child {
+	margin: 0;
+}
+
+
+.videos-container::-webkit-scrollbar {
+	display: none;
+}
+
+
+/*------------------------------------*/
+.video-thumbnail-wrapper {
+  height: 75%;
+  overflow: hidden;
+  position: relative;
+	background: #000;
+	border-radius: 10px;
+}
+
+.video-thumbnail-wrapper:hover .video-thumbnail-overlay {
+	transition: 2s;
+
+	-webkit-transition: all .3s ease;
+	background: linear-gradient(transparent 25%, rgba(0,0,0,0.75) 75%);
+}
+
+.video-thumbnail {
+  height: 100%;
+  width: auto;
+  border-radius: 10px;
+	transition: .3s;
+}
+
+.video-thumbnail-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: .3s;
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+	background: linear-gradient(transparent 25%, rgba(0,0,0,0.5) 75%);
+}
+
+.video-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  text-align: left;
+}
+
+.video-title p {
+  color: yellow;
+	text-transform: lowercase;
+	font-family: comfortaa;
+	margin: 0;
+}
+
+.video-title h3 {
+  margin: 0;
+	font-family: montserrat;
+	font-weight: 700;
+  color: white;
+}
+
+.video-info-wrapper {
+  height: 25%;
+  display: flex;
+  align-items: center;
+  color: #222;
+}
+
+.video-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+	padding: 0 10px;
+}
+
+.channel-icon-box {
+  flex-basis: auto;
+  height: 80%;
+  margin-right: .5em;
+	display: flex;
+	align-items: center;
+}
+
+.channel-icon {
+  height: 75%;
+	border-radius: 50px;
+	margin: auto;
+}
+
+.video-info {
+  flex: 4;
+  text-align: left;
+}
+
+.sharing-box {
+  flex: 1;
+	text-align: right;
+}
+
+
+.video-info .video-author {
+  margin: 0;
+  font-size: 0.9em;
+	line-height: 1;
+}
+
+.video-info .video-date {
+  margin: .25em 0 0 0;
+  font-size: 0.75em;
+	line-height: 1;
+}
+
+.share-text {
+  text-decoration: none;
+  color: #d884ff;
+  text-transform: lowercase;
+}
+/*------------------------------------*/
+
+
+
+
 
 
 
