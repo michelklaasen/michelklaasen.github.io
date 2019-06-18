@@ -286,7 +286,7 @@ Navigation
 Top header navigation
 --------------------------------*/
 
-#top-nav {
+#header {
 		display: none;
 		background-color: white;
   	/* background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); */
@@ -301,33 +301,33 @@ Top header navigation
 		box-shadow:0 0 20px rgba(0,0,0,0.2);
 }
 
-@media (min-width: 480px) {
+@media (min-width: 800px) {
 	#mnav {
 		display: none;
 	}
-	#top-nav {
+	#header {
 		display: block;
 	}
 }
 
-#top-nav .container {
+.top-nav-container {
 	height: 100%;
 	width: 100%;
 	max-width: 100%;
 	background: white;
 }
 
-#top-nav nav {
+#header-container {
 	height: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	text-decoration: none;
 	text-align: center;
 	text-transform: lowercase;
 }
 
-#top-nav nav ul {
+#header nav ul {
 	list-style:none;
 	height:100%;
 	margin: auto;
@@ -335,33 +335,33 @@ Top header navigation
 	display: block;
 }
 
-#top-nav nav ul li {
+#header nav ul li {
 	display:table;
 	height:100%;
 	float:left;
 }
 
-#top-nav nav ul li a {
+#header nav ul li a {
 	font-family:Comfortaa;
 	font-size:1em;
 	color: #999;
 	/* display: table-cell;
 	vertical-align:middle; */
-	padding:0 40px;
+	padding:0 2.2vw;
 	height:100%;
 	transition:200ms;
 }
 
-#top-nav nav ul li a:hover {
+#header nav ul li a:hover {
 	color:#D885FF;
 	transform:scale(1.2);
 }
 
-#top-nav nav #menu-logo img {
+#header nav #menu-logo img {
 	height:80px;
 }
 
-#top-nav nav .main-nav-active {
+.main-nav-active {
 	color: #c74fff;
 }
 
@@ -371,14 +371,13 @@ Horizontal tabs menu
 ----------------------------------------------*/
 
 #tabs {
-	margin-top: 3rem;
 	font-family: comfortaa;
 	text-transform: lowercase;
 }
 
 @media (min-width: 1200px) {
 	#tabs {
-		margin-top: 8rem;
+		margin-top: 10vh;
 	}
 }
 
@@ -387,24 +386,48 @@ Horizontal tabs menu
 	border-bottom: 1px solid #e6e6e6;
 }
 
+
+
+.page-title {
+	display: none;
+	flex-basis: 100%;
+	align-self: center;
+	text-align: center;
+	margin: 1.5rem 0;
+}
+
+.page-title-text {
+	margin: 0;
+	color: inherit;
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+.page-title-mobile {
+	width: 100%;
+	background: #37039f;
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+
+.page-title-text-mobile {
+	font-size: 1.5em;
+	color: white;
+	font-weight: 400;
+	margin: 0;
+	text-align: center;
+}
+
 @media (min-width: 800px) {
 	#tabs .flex-container {
 		justify-content: center;
 	}
-}
-
-#tabs .page-title h1 {
-	font-size:1.5em;
-	color:#5e5e5e;
-	font-weight:400;
-	margin:0;
-}
-
-#tabs .flex-container .page-title {
-	flex-basis: 100%;
-	align-self: center;
-	text-align: center;
-	margin-bottom: 2rem;
+	.page-title {
+		display: block;
+	}
+	.page-title-mobile {
+		display: none;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -443,10 +466,8 @@ Horizontal tabs menu
 	font-size: 1em;
 	padding: 0;
 	/* Let it scroll, let it scroll */
-	overflow: auto;
+	overflow-x: auto;
 	white-space: nowrap;
-	-webkit-overflow-scrolling: touch;
-	-ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 #tabs .tabs-items li {
@@ -480,14 +501,14 @@ Horizontal tabs menu
 }
 
 .tabcontent {
-	margin: 2rem 0;
+	margin: 1.5rem 0;
 }
 
 .tabcontent #discover.flex-container {
 	align-items: flex-start;
 }
 
-.tabcontent p {
+.tabtext {
 	color: #666;
 	font-size: 1em;
 	line-height: 1.5;
@@ -544,21 +565,6 @@ Horizontal tabs menu
 	width: 400px;
 	height: 250px;
 }
-
-
-/* Horizontal scroll */
-
-.x-scroll .scroll-wrapper {
-	/* overflow: hidden; */
-}
-
-.x-scroll .scroll-inner {
-	white-space: nowrap;
-}
-
-/* --- About page --- */
-
-/* Our story */
 
 #ourStory #our-story-image {
 	flex-basis: 30%;
@@ -841,12 +847,14 @@ Learn page - resources
 
 .video-section-container {
 	margin: 1rem 0;
+	border-right: 1px solid #bbb;
 }
 
 .video-section-title-box {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
+	padding: 0 10px;
 }
 
 .video-section-title {
@@ -854,6 +862,7 @@ Learn page - resources
 	font-weight: 400;
 	color: #999;
 	text-transform: lowercase;
+	margin: 0 0 .5em 0;
 }
 
 .view-all {
@@ -865,7 +874,7 @@ Learn page - resources
 
 .videos-container {
 	overflow-x: auto;
-	min-height: 200px;
+	min-height: 280px;
 	display: flex;
 	flex-flow: row nowrap;
 }
@@ -874,6 +883,7 @@ Learn page - resources
 	/* background: #d99;
 	border: 2px solid #dd4; */
 	width: auto;
+	max-width: 100%;
 	margin-right: 1rem;
 }
 
@@ -886,8 +896,6 @@ Learn page - resources
 	display: none;
 }
 
-
-/*------------------------------------*/
 .video-thumbnail-wrapper {
   height: 75%;
   overflow: hidden;
@@ -897,17 +905,14 @@ Learn page - resources
 }
 
 .video-thumbnail-wrapper:hover .video-thumbnail-overlay {
-	transition: 2s;
-
-	-webkit-transition: all .3s ease;
-	background: linear-gradient(transparent 25%, rgba(0,0,0,0.75) 75%);
+	background: none;
 }
 
 .video-thumbnail {
   height: 100%;
   width: auto;
   border-radius: 10px;
-	transition: .3s;
+	transition: .5s ease;
 }
 
 .video-thumbnail-overlay {
@@ -916,12 +921,11 @@ Learn page - resources
 	right: 0;
 	bottom: 0;
 	left: 0;
-	transition: .3s;
-	-webkit-transition: all 0.5s ease-in;
-	-moz-transition: all 0.5s ease-in;
-	-o-transition: all 0.5s ease-in;
-	transition: all 0.5s ease-in;
-	background: linear-gradient(transparent 25%, rgba(0,0,0,0.5) 75%);
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	background: rgba(0,0,0,0.25);
 }
 
 .video-title {
@@ -932,17 +936,31 @@ Learn page - resources
   text-align: left;
 }
 
-.video-title p {
-  color: yellow;
+.video-title-category {
+  color: white;
+	line-height: 1;
 	text-transform: lowercase;
 	font-family: comfortaa;
-	margin: 0;
+	margin: 0 0 8px 0;
 }
 
-.video-title h3 {
+.cat-heros {
+	color: khaki;
+}
+.cat-leti {
+	color: darksalmon;
+}
+.cat-must {
+	color: darkviolet;
+}
+.cat-why {
+	color: olivedrab;
+}
+
+.video-title-text {
   margin: 0;
 	font-family: montserrat;
-	font-weight: 700;
+	font-weight: 800;
   color: white;
 }
 
@@ -978,24 +996,27 @@ Learn page - resources
 .video-info {
   flex: 4;
   text-align: left;
+	font-family: sans-serif;
+}
+
+.video-author {
+  margin: 0;
+  font-size: 14px;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.video-date {
+  margin: 4px 0 0 0;
+  font-size: 11px;
+	color: #999;
+	font-weight: 500;
+	line-height: 1;
 }
 
 .sharing-box {
   flex: 1;
 	text-align: right;
-}
-
-
-.video-info .video-author {
-  margin: 0;
-  font-size: 0.9em;
-	line-height: 1;
-}
-
-.video-info .video-date {
-  margin: .25em 0 0 0;
-  font-size: 0.75em;
-	line-height: 1;
 }
 
 .share-text {

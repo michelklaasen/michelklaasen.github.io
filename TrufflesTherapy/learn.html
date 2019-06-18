@@ -11,7 +11,7 @@
   <link rel="stylesheet" type-"text/css" href="css/style.css">
   <link rel="stylesheet" type-"text/css" href="css/mobile-nav.css">
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat:400,700|Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="global-burger">
@@ -57,9 +57,9 @@ Experience
 
 
   <!-- Top header navigation -->
-  <header id="top-nav">
-    <div class="container">
-      <nav>
+  <header id="header">
+    <div class="large-container">
+      <nav id="header-container">
         <div id="menu-left">
           <ul>
             <li><a href="learn.html" class="main-nav-active">Learn</a></li>
@@ -87,10 +87,13 @@ Experience
 
   <!-- Horizontal tabs menu -->
   <section id="tabs">
+    <div class="page-title-mobile">
+      <h1 class="page-title-text-mobile">Learn</h1>
+    </div>
     <div class="large-container">
       <div class="flex-container">
         <div class="page-title">
-          <h1>Learn</h1>
+          <h1 class="page-title-text">Learn</h1>
         </div>
         <div class="tabs-items-container scroll-wrapper">
           <ul class="tabs-items scroll-inner">
@@ -131,112 +134,133 @@ Experience
             </a>
           </div>
           <div class="videos-container">
+
+            <!-- Video boxes -->
             <div class="video-box">
-              <div class="video-thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/LcAj1oxMT9U/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
-                <div class="video-thumbnail-overlay"></div>
-                <div class="video-title">
-                  <p>Our heros</p>
-                  <h3>The Science of Psychedelics - with Michael Pollan</h3>
+              <a href="https://www.youtube.com/watch?v=81-v8ePXPd4" target="_blank">
+                <div class="video-thumbnail-wrapper">
+                  <img src="https://img.youtube.com/vi/81-v8ePXPd4/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
+                  <div class="video-thumbnail-overlay"></div>
+                  <div class="video-title">
+                    <p class="video-title-category cat-heros">Our heros</p>
+                    <h3 class="video-title-text">The science of psilocybin and its use to relieve suffering</h3>
+                  </div>
                 </div>
-              </div>
+              </a>
               <div class="video-info-wrapper">
                 <div class="channel-icon-box">
-                  <img src="https://yt3.ggpht.com/a/AGF-l78u9dcOhqNCSrA2eKwCZ3VsdUspQXBmCItTgw=s48-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
+                  <img src="https://yt3.ggpht.com/a/AGF-l78vQ76hkBIAiNm1QttackROG2rCTBzdt5tyWg=s88-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
                 </div>
                 <div class="video-info">
                   <h4 class="video-author">Roland Griffiths</h4>
-                  <p class="video-date">Published on 5 Sep 2018</p>
+                  <p class="video-date">Published on 20 Apr 2016</p>
                 </div>
                 <div class="sharing-box">
                   <p><a class="share-text" href="#">Share</a></p>
                 </div>
               </div>
             </div>
+
             <div class="video-box">
-              <div class="video-thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/LcAj1oxMT9U/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
-                <div class="video-title">
-                  <p>Our heros</p>
-                  <h3>The Science of Psychedelics - with Michael Pollan</h3>
+              <a href="https://www.youtube.com/watch?v=tV8PSevhd_M" target="_blank">
+                <div class="video-thumbnail-wrapper">
+                  <img src="https://img.youtube.com/vi/tV8PSevhd_M/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
+                  <div class="video-thumbnail-overlay"></div>
+                  <div class="video-title">
+                    <p class="video-title-category cat-leti">Leti's pick</p>
+                    <h3 class="video-title-text">Consciousness and psychedelics</h3>
+                  </div>
                 </div>
-              </div>
+              </a>
               <div class="video-info-wrapper">
                 <div class="channel-icon-box">
-                  <img src="https://yt3.ggpht.com/a/AGF-l78u9dcOhqNCSrA2eKwCZ3VsdUspQXBmCItTgw=s48-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
+                  <img src="https://yt3.ggpht.com/a/AGF-l79O1ys8TU2KwOEFMAhT9v1s-6wYG-Jw67Cudg=s88-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
                 </div>
                 <div class="video-info">
-                  <h4 class="video-author">Roland Griffiths</h4>
-                  <p class="video-date">Published on 5 Sep 2018</p>
+                  <h4 class="video-author">Peter Sjostedt-H</h4>
+                  <p class="video-date">Published on 16 Jan 2019</p>
                 </div>
                 <div class="sharing-box">
                   <p><a class="share-text" href="#">Share</a></p>
                 </div>
               </div>
             </div>
+
             <div class="video-box">
-              <div class="video-thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/LcAj1oxMT9U/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
-                <div class="video-title">
-                  <p>Our heros</p>
-                  <h3>The Science of Psychedelics - with Michael Pollan</h3>
+              <a href="https://www.youtube.com/watch?v=XI5frPV58tY" target="_blank">
+                <div class="video-thumbnail-wrapper">
+                  <img src="https://img.youtube.com/vi/XI5frPV58tY/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
+                  <div class="video-thumbnail-overlay"></div>
+                  <div class="video-title">
+                    <p class="video-title-category cat-must">Must see!</p>
+                    <h3 class="video-title-text">6 ways mushrooms can save the world</h3>
+                  </div>
                 </div>
-              </div>
+              </a>
               <div class="video-info-wrapper">
                 <div class="channel-icon-box">
-                  <img src="https://yt3.ggpht.com/a/AGF-l78u9dcOhqNCSrA2eKwCZ3VsdUspQXBmCItTgw=s48-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
+                  <img src="https://yt3.ggpht.com/a/AGF-l7999BXZRpa6UpKd3C_9c2X_XB2q7VWGWJSRdw=s88-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
                 </div>
                 <div class="video-info">
-                  <h4 class="video-author">Roland Griffiths</h4>
-                  <p class="video-date">Published on 5 Sep 2018</p>
+                  <h4 class="video-author">Paul Stamets</h4>
+                  <p class="video-date">Published on 8 May 2008</p>
                 </div>
                 <div class="sharing-box">
                   <p><a class="share-text" href="#">Share</a></p>
                 </div>
               </div>
             </div>
+
             <div class="video-box">
-              <div class="video-thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/LcAj1oxMT9U/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
-                <div class="video-title">
-                  <p>Our heros</p>
-                  <h3>The Science of Psychedelics - with Michael Pollan</h3>
+              <a href="https://www.youtube.com/watch?v=MZIaTaNR3gk" target="_blank">
+                <div class="video-thumbnail-wrapper">
+                  <img src="https://img.youtube.com/vi/MZIaTaNR3gk/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
+                  <div class="video-thumbnail-overlay"></div>
+                  <div class="video-title">
+                    <p class="video-title-category cat-heros">Our heros</p>
+                    <h3 class="video-title-text">Psychedelics: Lifting the veil</h3>
+                  </div>
                 </div>
-              </div>
+              </a>
               <div class="video-info-wrapper">
                 <div class="channel-icon-box">
-                  <img src="https://yt3.ggpht.com/a/AGF-l78u9dcOhqNCSrA2eKwCZ3VsdUspQXBmCItTgw=s48-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
+                  <img src="https://yt3.ggpht.com/a/AGF-l79O1ys8TU2KwOEFMAhT9v1s-6wYG-Jw67Cudg=s88-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
                 </div>
                 <div class="video-info">
-                  <h4 class="video-author">Roland Griffiths</h4>
-                  <p class="video-date">Published on 5 Sep 2018</p>
+                  <h4 class="video-author">Robin Carhart-Harris</h4>
+                  <p class="video-date">Published on 14 Apr 2016</p>
                 </div>
                 <div class="sharing-box">
                   <p><a class="share-text" href="#">Share</a></p>
                 </div>
               </div>
             </div>
+
             <div class="video-box">
-              <div class="video-thumbnail-wrapper">
-                <img src="https://img.youtube.com/vi/LcAj1oxMT9U/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
-                <div class="video-title">
-                  <p>Our heros</p>
-                  <h3>The Science of Psychedelics - with Michael Pollan</h3>
+              <a href="https://www.youtube.com/watch?v=U561dQIe6c4" target="_blank">
+                <div class="video-thumbnail-wrapper">
+                  <img src="https://img.youtube.com/vi/U561dQIe6c4/mqdefault.jpg" class="video-thumbnail" alt="Youtube Thumbnail">
+                  <div class="video-thumbnail-overlay"></div>
+                  <div class="video-title">
+                    <p class="video-title-category cat-why">Why not?</p>
+                    <h3 class="video-title-text">Psychedelics and psychology: modern medicine meets ancient medicine</h3>
+                  </div>
                 </div>
-              </div>
+              </a>
               <div class="video-info-wrapper">
                 <div class="channel-icon-box">
-                  <img src="https://yt3.ggpht.com/a/AGF-l78u9dcOhqNCSrA2eKwCZ3VsdUspQXBmCItTgw=s48-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
+                  <img src="https://yt3.ggpht.com/a/AGF-l79O1ys8TU2KwOEFMAhT9v1s-6wYG-Jw67Cudg=s88-mo-c-c0xffffffff-rj-k-no" alt="Channel icon" class="channel-icon">
                 </div>
                 <div class="video-info">
-                  <h4 class="video-author">Roland Griffiths</h4>
-                  <p class="video-date">Published on 5 Sep 2018</p>
+                  <h4 class="video-author">Anthony Bossis</h4>
+                  <p class="video-date">Published on 18 Oct 2017</p>
                 </div>
                 <div class="sharing-box">
                   <p><a class="share-text" href="#">Share</a></p>
                 </div>
               </div>
             </div>
+
           </div>
 
       </div>
