@@ -357,7 +357,7 @@ Top header navigation
 	transform:scale(1.2);
 }
 
-#header nav #menu-logo img {
+.main-logo {
 	height:80px;
 }
 
@@ -406,7 +406,7 @@ Horizontal tabs menu
 .page-title-mobile {
 	width: 100%;
 	background: #37039f;
-	padding: 2rem;
+	padding: 2rem 0;
 	margin-bottom: 2rem;
 }
 
@@ -847,14 +847,14 @@ Learn page - resources
 
 .video-section-container {
 	margin: 1rem 0;
-	border-right: 1px solid #bbb;
+	border-right: 1px solid #eee;
 }
 
 .video-section-title-box {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
-	padding: 0 10px;
+	padding: 0 10px 0 0;
 }
 
 .video-section-title {
@@ -884,16 +884,44 @@ Learn page - resources
 	border: 2px solid #dd4; */
 	width: auto;
 	max-width: 100%;
-	margin-right: 1rem;
+	margin-right: 1.5rem;
 }
 
 .video-box:last-child {
 	margin: 0;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
 
-.videos-container::-webkit-scrollbar {
-	display: none;
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(220,220,220,0.8);
+	border-radius: 10px;
+	height: 50px;
+	width: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+	border-radius: 10px;
+	height: 5px;
+	transition: .3s;
+	-webkit-transition: .3s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+@media (max-width: 800px) {
+		.videos-container::-webkit-scrollbar {
+			display: none;
+		}
 }
 
 .video-thumbnail-wrapper {
