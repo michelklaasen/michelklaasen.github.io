@@ -213,7 +213,7 @@ Learn page - resources
 ----------------------------------------------*/
 
 .video-section-container {
-	margin: 1rem 0;
+	margin: 1.5rem 0;
 }
 
 .video-section-title-box {
@@ -228,7 +228,7 @@ Learn page - resources
 	font-weight: 400;
 	color: #999;
 	text-transform: lowercase;
-	margin: 0 0 .5em 0;
+	margin: 0 0 1em 0;
 }
 
 .view-all {
@@ -401,19 +401,19 @@ Learn page - resources
 .video-info {
   flex: 4;
   text-align: left;
-	font-family: sans-serif;
+	font-family: 'Open Sans';
 }
 
 .video-author {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
 	font-weight: 600;
 	line-height: 1;
 }
 
 .video-date {
-  margin: 4px 0 0 0;
-  font-size: 11px;
+  margin: 6px 0 0 0;
+  font-size: 12px;
 	color: #999;
 	font-weight: 500;
 	line-height: 1;
@@ -429,6 +429,21 @@ Learn page - resources
   color: #d884ff;
   text-transform: lowercase;
 }
+
+.watch-button-wrapper {
+  flex: 1;
+}
+
+.watch-button {
+  text-transform: lowercase;
+  font-family: Comfortaa;
+  padding: 12px 18px;
+  color: white;
+  background: #37039f;
+  border-radius: 100px;
+}
+
+
 /*------------------------------------*/
 
 
