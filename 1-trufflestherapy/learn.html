@@ -134,8 +134,8 @@
             <h4 class="view-all">View all</h4>
           </a>
         </div>
-        <div class="videos-container">
-          <div class="videos-container-inner">
+        <div class="videos-container xscroll-container">
+          <div class="videos-container-inner xscroll-inner">
             <!-- Video boxes -->
             <div class="video-box">
               <a href="https://www.youtube.com/watch?v=81-v8ePXPd4" target="_blank">
@@ -268,8 +268,8 @@
             <h4 class="view-all">View all</h4>
           </a>
         </div>
-        <div class="videos-container">
-          <div class="videos-container-inner">
+        <div class="videos-container xscroll-container">
+          <div class="videos-container-inner xscroll-inner">
             <!-- Video boxes -->
             <div class="video-box">
               <a href="https://www.youtube.com/watch?v=tz4CrWE_P0g" target="_blank">
@@ -402,8 +402,8 @@
             <h4 class="view-all">View all</h4>
           </a>
         </div>
-        <div class="videos-container">
-          <div class="videos-container-inner">
+        <div class="videos-container xscroll-container">
+          <div class="videos-container-inner xscroll-inner">
             <!-- Video boxes -->
             <div class="video-box">
               <a href="https://www.youtube.com/watch?v=CuOIECQ5zag" target="_blank">
@@ -553,9 +553,9 @@
   <!-- scrolling for all sections -->
   <script>
     (function () {
-      var scrollEl = document.querySelector('#videos-tedtalks .videos-container-inner')
+      var scrollEl = document.querySelector('#videos-tedtalks .xscroll-inner')
       var scr = new ScrollBooster({
-        viewport: document.querySelector('#videos-tedtalks .videos-container'),
+        viewport: document.querySelector('#videos-tedtalks .xscroll-container'),
         emulateScroll: true,
         mode: 'x',
         onUpdate: function (data) {
@@ -570,9 +570,9 @@
   </script>
   <script>
     (function () {
-      var scrollEl = document.querySelector('#videos-podcasts .videos-container-inner')
+      var scrollEl = document.querySelector('#videos-podcasts .xscroll-inner')
       var scr = new ScrollBooster({
-        viewport: document.querySelector('#videos-podcasts .videos-container'),
+        viewport: document.querySelector('#videos-podcasts .xscroll-container'),
         emulateScroll: true,
         mode: 'x',
         onUpdate: function (data) {
@@ -587,9 +587,9 @@
   </script>
   <script>
     (function () {
-      var scrollEl = document.querySelector('#videos-educational .videos-container-inner')
+      var scrollEl = document.querySelector('#videos-educational .xscroll-inner')
       var scr = new ScrollBooster({
-        viewport: document.querySelector('#videos-educational .videos-container'),
+        viewport: document.querySelector('#videos-educational .xscroll-container'),
         emulateScroll: true,
         mode: 'x',
         onUpdate: function (data) {
