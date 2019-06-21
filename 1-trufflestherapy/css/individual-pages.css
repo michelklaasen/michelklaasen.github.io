@@ -449,28 +449,12 @@ Learn page - resources
 
 
 /*----------------------------------------------
-Retreats page
+Retreats page - Overview
 ----------------------------------------------*/
 
 /* Overview */
 .tabcontent #discover.flex-container {
 	align-items: flex-start;
-}
-
-.tabtext {
-	color: #666;
-	font-size: 1em;
-	line-height: 1.5;
-	font-family: sans-serif;
-}
-
-.tabcontent h2 {
-	font-family: 'Montserrat';
-	font-weight: 900;
-	font-size: 2.5em;
-	margin-top: 0;
-	font-weight: 600;
-	color: #333;
 }
 
 .tabcontent #overview-text {
@@ -514,6 +498,173 @@ Retreats page
 	width: 400px;
 	height: 250px;
 }
+
+/*----------------------------------------------
+Retreats page - Group
+----------------------------------------------*/
+
+#july-11 {
+	background-image: url("../img/retreats/group-retreat-jake-kobrin.jpg");
+}
+#aug-4 {
+	background-image: url("../img/retreats/group-retreat-group.jpg");
+}
+#aug-23 {
+	background-image: url("../img/retreats/group-retreat-microdose.jpg");
+}
+#sep-1 {
+	background-image: url("../img/retreats/group-retreat-ryan.jpg");
+}
+#sep-15 {
+
+}
+#oct-6 {
+
+}
+
+.gr-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+.gr-box {
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	position: relative;
+	margin-bottom: 1.5rem;
+	height: 240px;
+	flex-basis: 100%;
+	overflow: hidden;
+}
+
+.gr-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: black;
+	opacity: .3;
+	transition: opacity .2s;
+}
+
+.gr-overlay:hover {
+	opacity: 0;
+}
+
+.gr-box div:not(.gr-overlay) {
+	pointer-events:none;
+}
+
+.space-box {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
+
+.space-available {
+	color: aqua;
+	margin: 0;
+}
+
+.fully-booked {
+	color: magenta;
+}
+
+.date-box {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	width: 80px;
+	text-align: center;
+}
+
+.calendar-header {
+	background: #ff387e;
+	color: white;
+	border-radius: 6px 6px 0 0;
+	padding: 4px 0;
+}
+
+.calendar-body {
+	background: white;
+	border-radius: 0 0 6px 6px;
+	height: 100%;
+	padding: 8px 0;
+}
+
+.title-box {
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	right: 1rem;
+}
+
+.gr-title {
+	text-align: center;
+	color: white;
+	margin: 0;
+	font-size: 1.25rem;
+}
+
+.little-dot {
+	opacity: yes;
+}
+
+.gr-tag {
+	font-style: italic;
+}
+
+.gr-include {
+	margin-top: 2rem;
+}
+
+.gr-included-list {
+  list-style: none; /* Remove default bullets */
+}
+
+.gr-included-text-box li {
+	margin-bottom: .5em;
+}
+
+.gr-included-list li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #ff387e; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+
+@media (min-width: 800px) {
+	.center-800 {
+		text-align: center;
+	}
+	.gr-box {
+		flex-basis: 48.5%;
+		height: 250px;
+	}
+	.gr-included-text-box {
+		width: 75%;
+		margin: auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.gr-included-text-box {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+	.gr-included-list {
+		flex-basis: 47%;
+	}
+}
+
 
 /*----------------------------------------------
 About page

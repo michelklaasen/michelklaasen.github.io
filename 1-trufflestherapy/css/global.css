@@ -2,8 +2,6 @@
 Global CSS
 --------------------------------*/
 
-/* Global stuff */
-
 body, html {
 	font-family:"Open Sans", "Montserrat", sans-serif;
 	margin: 0;
@@ -19,6 +17,11 @@ p {
 
 section {
 	overflow:hidden;
+}
+
+ul {
+	margin: 0;
+	padding-left:.75em;
 }
 
 button, .button {
@@ -72,8 +75,14 @@ a.button {
 	padding:1em;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
 	margin:0.75em 0 0.5em 0;
+	font-family: montserrat;
+}
+
+.oldschool {
+	font-family: comfortaa !important;
+	text-transform: lowercase;
 }
 
 a {
@@ -102,9 +111,6 @@ a button {
 
 .xscroll-container {
 	overflow: hidden;
-}
-
-.xscroll-container {
 	cursor: move; /* fallback if grab cursor is unsupported */
 	cursor: grab;
 	cursor: -moz-grab;
@@ -372,7 +378,7 @@ Top header navigation
 }
 
 .main-nav-active {
-	color: #c74fff;
+	color: #c74fff !important;
 }
 
 @media (min-width: 1100px) {
@@ -508,9 +514,14 @@ Horizontal tabs menu
 }
 
 .page-title-container {
-	width: 75%;
-	margin: 0 auto;
-	border-bottom: 1px solid #ddd;
+	width: 100%;
+	margin-bottom:.5rem;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	height: 15vh;
+	background: #37039f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .page-title {
@@ -518,13 +529,14 @@ Horizontal tabs menu
 	font-size: 2em;
 	text-align: center;
 	text-transform: lowercase;
-	margin: .5em 0;
+	margin: 0;
+	padding: 1rem 0;
 	font-weight: 400;
-	color: #999;
+	color: white;
 }
 
 .tabs-container {
-	padding: 0 12px;
+	padding: 0 16px;
 	border-bottom: 1px solid #ddd;
 }
 
@@ -540,12 +552,16 @@ Horizontal tabs menu
 	color: #999;
 	font-family: inherit;
 	text-transform: lowercase;
-	margin: 0 .4rem;
+	margin: 0 8px;
 	padding: 1.5em 0;
 	cursor: pointer;
 	-webkit-transition: border-bottom .3s ease;
 	transition: border-bottom .3s ease;
 	border-bottom: 1px solid #ddd;
+}
+
+.tablink:first-child {
+	margin-left: 0;
 }
 
 .tablink.active-tab {
@@ -566,6 +582,9 @@ Horizontal tabs menu
 }
 
 @media (min-width: 480px) {
+	.page-title-container {
+		height: 100px;
+	}
 	.tabs-container {
 		padding: 0 12px;
 	}
@@ -611,6 +630,28 @@ Horizontal tabs menu
 		margin: 0 2em;
 	}
 }
+
+/* tabcontent typography */
+.tabtext {
+	color: #666;
+	font-size: 1em;
+	line-height: 1.5;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.tabcontent h2 {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	font-size: 2.5em;
+	margin-top: 0;
+	font-weight: 600;
+	color: #333;
+}
+
+.headline-center {
+	text-align: center;
+}
+
 
 
 
