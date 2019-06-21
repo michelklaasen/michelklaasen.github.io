@@ -410,13 +410,16 @@ Fullscreen mobile menu + global burger
   left: 0;
   z-index: 1000;
   background-color: white;
-  transform: translateX(100vw);
   opacity: 0;
+	-webkit-transform: translateX(100vw);
+	transform: translateX(100vw);
 	-webkit-transition: .3s ease-in;
-	transition: .3s ease-in;}
+	transition: .3s ease-in;
+}
 
 #fullscreen-nav.open {
   opacity: 1;
+	-webkit-transform: none;
   transform: none;
 	-webkit-transition: .3s ease-out;
   transition: .3s ease-out;
