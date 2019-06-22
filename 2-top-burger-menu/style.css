@@ -1,10 +1,20 @@
+body {
+  margin: 0;
+  transition: transform .3s, background-color .3s;
+  overflow-x: hidden;
+}
+
 .page-title {
   height: 12vh;
   background: #37039f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .page-title h1 {
   margin: 0;
+  font-weight: 400;
   color: white;
   font-size: 2rem;
   text-align: center;
@@ -13,4 +23,137 @@
 .oldschool {
   font-family: comfortaa;
   text-transform: lowercase;
+}
+.page-content {
+  width: 90%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+@media (min-width: 480px) {
+  .page-content {
+    width: 75%;
+  }
+}
+.page-content li {
+  margin-bottom: 1rem;
+}
+
+/* Sidebar menu */
+#sidenav {
+  position: fixed;
+  top: 0;
+  left: -70vw;
+  width: 70vw;
+  height: 100vh;
+  background-color: #fff;
+  transition: .3s;
+  overflow: hidden;
+}
+
+#sidenav.opn {
+  transform: translateX(100%);
+}
+
+.sidenav-icon {
+  display: inline-block;
+  height: 1.5em;
+  margin-right: 1em;
+  margin-bottom: -.5em;
+}
+
+.sidenav-item {
+  display: block;
+  font-family: comfortaa;
+  text-transform: lowercase;
+  font-size: 1.25rem;
+  padding: 1em;
+  color: #999;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.sidenav-item:hover {
+  color: #c74fff;
+  background-color: #f2f2f2;
+}
+
+.sidenav-logo {
+  width: 33%;
+  display: block;
+  margin: auto;
+  padding: 1em 0;
+}
+
+#body.open {
+  transform: translateX(70vw);
+  background-color: rgba(0,0,0,0.5);
+}
+
+
+
+#top-burger {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  z-index: 99;
+}
+
+/* Hamburger  */
+.burger-container {
+	height: 100%;
+	width: 100%;
+}
+
+.burger {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.burger-line {
+	width: 32px;
+	height: 3px;
+	border-radius: 20px;
+	background-color: white;
+  -webkit-transition: transform .25s ease;
+	transition: transform .25s ease; /* Cross -> burger */
+}
+
+.burger-line-middle {
+	margin: 4px 0;
+  opacity: 1;
+	-webkit-transition: all .15s ease-out .3s;
+	transition: all .15s ease .15s; /* Cross -> burger */
+}
+
+/* Burger animations */
+.burger.open .burger-line {
+  -webkit-transition: transform .3s ease;
+  transition: transform .3s ease .1s; /* Burger -> cross */
+}
+
+.burger.open .burger-line-middle {
+	opacity: 0;
+	margin: -3px 0;
+	-webkit-transition: all .15s ease;
+	transition: all .2s ease; /* Burger -> cross */
+}
+
+
+.burger.open .burger-line-top {
+	-webkit-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+
+.burger.open .burger-line-bottom {
+	-webkit-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
 }
