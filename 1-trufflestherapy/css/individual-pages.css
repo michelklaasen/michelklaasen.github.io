@@ -216,11 +216,16 @@ Learn page - resources
 	margin: 1.5rem 0;
 }
 
+.video-section-container:first-child {
+	margin-top: 0;
+}
+
 .video-section-title-box {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
 	padding: 0 10px 0 0;
+	margin-bottom: 1rem;
 }
 
 .video-section-title {
@@ -228,7 +233,7 @@ Learn page - resources
 	font-weight: 400;
 	color: #999;
 	text-transform: lowercase;
-	margin: 0 0 1em 0;
+	margin: 0;
 }
 
 .view-all {
@@ -236,6 +241,7 @@ Learn page - resources
 	font-weight: 400;
 	text-transform: lowercase;
 	font-family: comfortaa;
+	margin: 0;
 }
 
 .videos-container {
@@ -444,7 +450,6 @@ Learn page - resources
 }
 
 
-/*------------------------------------*/
 
 
 
@@ -453,50 +458,94 @@ Retreats page - Overview
 ----------------------------------------------*/
 
 /* Overview */
-.tabcontent #discover.flex-container {
-	align-items: flex-start;
+.discover-video-box {
+	width: 100%;
+	margin-top: 1rem;
 }
 
-.tabcontent #overview-text {
-	flex-basis: calc(50% - 50px);
-	padding-right: 50px;
+.process-box {
+	border-radius: 10px;
+	overflow: hidden;
+	box-sizing: border-box;
+	max-width: 520px;
+	margin-bottom: 2rem;
+	/* border: 1px solid #ddd; */
 }
 
-.tabcontent #overview-video {
-	flex-basis: 50%;
+.process-box:last-child {
+	margin-bottom: 0;
 }
 
-.tabcontent #approach {
-	padding-top: 100px;
-	width: 66.7%;
+.process-image {
+	min-height: 180px;
+	max-height: 240px;
+	display: block;
 	margin: auto;
 }
 
-.tabcontent #approach h2 {
+.process-box-content {
+	/* width: 90%; */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.process-title {
 	text-align: center;
 }
 
-.tabcontent #process {
-	margin-top: 100px;
+#approach {
+	margin: 2rem 0;
 }
 
-.tabcontent #process .process-box-container {
-	flex-basis: 29%;
-	overflow: hidden;
+
+@media (min-width: 420px) {
+	#process.flex-container {
+		justify-content: center;
+	}
 }
 
-.tabcontent #process h2 {
-	margin: 0.5em 0;
-	text-align: center;
+@media (min-width: 740px) {
+	#process.flex-container {
+		justify-content: space-between;
+	}
+	.process-box-container {
+		flex-basis: 47%;
+	}
+	#integration {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
-.tabcontent #process .process-box-container .process-box-content {
-
+@media (min-width: 870px) {
+	.discover-text {
+		flex-basis: 48.5%;
+		align-self: flex-start;
+	}
+	.discover-text h2 {
+		text-align: left;
+	}
+	.discover-video-box {
+		flex-basis: 48.5%;
+		margin: 0;
+	}
+	#approach {
+		margin: 3rem auto;
+		width: 75%;
+	}
+	#approach h2 {
+		text-align: center;
+	}
 }
 
-.tabcontent #process .process-box-container img {
-	width: 400px;
-	height: 250px;
+@media (min-width: 1050px) {
+	.process-box-container {
+		flex-basis: 30%;
+	}
+	#integration {
+		margin: 0;
+	}
 }
 
 /*----------------------------------------------
@@ -662,6 +711,40 @@ Retreats page - Group
 	}
 	.gr-included-list {
 		flex-basis: 47%;
+	}
+}
+
+#commitment {
+	min-height: 75vh;
+	background-color: #5e2fed;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 4rem 0;
+}
+
+.commitment-container {
+	flex-basis: 90%;
+	text-align: center;
+	padding: 2rem 0;
+}
+
+.commitment-image {
+	height: 3rem;
+	display: block;
+	margin: auto;
+}
+
+@media (min-width: 870px) {
+	.commitment-container {
+		flex-basis: 75%;
+	}
+}
+
+@media (min-width: 1050px) {
+	.commitment-container {
+		flex-basis: 50%;
 	}
 }
 
