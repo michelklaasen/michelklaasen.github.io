@@ -262,7 +262,7 @@
               <h4 class="view-all">View all</h4>
             </a>
           </div>
-          <div class="videos-outside">
+          <div class="videos-outer">
             <div class="scrollbutton-container button-go-left" onclick="#">
               <div class="button-left-inner">
                 <div class="scrollbutton-line button-left-line-top"></div>
@@ -784,6 +784,15 @@
   $(document).ready(function(){
      $(".burger-container").click(function(){
          $(".burger,#fullscreen-nav").toggleClass('open');
+     });
+  });
+</script>
+
+<!-- Scroll video section right -->
+<script>
+  $(document).ready(function(){
+     $(".button-go-right").click(function(){
+         $(".videos-container-inner").toggleClass('open');
      });
   });
 </script>
