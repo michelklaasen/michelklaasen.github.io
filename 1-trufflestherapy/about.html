@@ -2,39 +2,34 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About | Truffles Therapy</title>
   <!-- CSS -->
   <link rel="stylesheet" type-"text/css" href="css/global.css">
-  <link rel="stylesheet" type-"text/css" href="css/individual-pages.css">
-  <link rel="stylesheet" type-"text/css" href="css/mobile-nav.css">
+  <link rel="stylesheet" type-"text/css" href="css/pages.css">
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat:400,700|Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Header & Co -->
-
-  <header>
+  <header id ="header">
     <div class="container">
-      <nav>
-        <div id="menu-left">
-          <ul>
-            <li><a href="learn.html">Learn</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="retreats.html">Retreats</a></li>
-          </ul>
+      <nav id="header-menu-container">
+        <div id="header-menu-left">
+          <a href="learn.html" class="header-menu-item">Learn</a>
+          <a href="experience.html" class="header-menu-item">Experience</a>
+          <a href="retreats.html" class="header-menu-item">Retreats</a>
         </div>
-        <div id="menu-logo">
+        <div id="header-logo-container">
           <a href="index.html">
-            <img src="img/HeartMushroom2.png" alt="TrufflesTherapy Logo" class="main-logo">
+            <img src="img/HeartMushroom2.png" alt="Trufflestherapy Logo" id="header-logo">
           </a>
         </div>
-        <div id="menu-right">
-          <ul>
-            <li><a href="about.html" class="main-nav-active">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="connect.html">Connect</a></li>
-          </ul>
+        <div id="header-menu-right">
+          <a href="about.html" class="header-menu-item active">About</a>
+          <a href="blog.html" class="header-menu-item">Blog</a>
+          <a href="connect.html" class="header-menu-item">Connect</a>
         </div>
       </nav>
     </div>
@@ -43,101 +38,123 @@
 
 
   <!-- Horizontal tabs menu -->
-  <section class="tabs">
-    <div class="container">
-      <div class="flex-container">
-        <div class="page-title">
-          <h1>About</h1>
-        </div>
-        <div class="tabs-items-container">
-          <ul class="tabs-items">
-            <li><a  id="default-tab" class="tablinks" onclick="openTab(event, 'ourStory')">Our story</a></li>
-            <li><a class="tablinks" onclick="openTab(event, 'theTeam')">The team</a></li>
-            <li><a class="tablinks" onclick="openTab(event, 'joinUs')">Join us</a></li>
-          </ul>
-          </div>
-        <div class="flex-fill">
-          <!-- Very empty -->
-        </div>
+  <section id="about-tabs" class="tabs">
+    <div class="page-title-container">
+      <h1 class="page-title">About</h1>
+    </div>
+    <div class="tabs-container">
+      <div class="page-title-wide-container">
+        <h1 class="page-title-wide">About</h1>
       </div>
+      <div class="tabs-inner">
+        <a id="default-tab" class="tablink" onclick="openTab(event, 'ourStory')">Our story</a>
+        <a href="#" class="tablink" onclick="openTab(event, 'theTeam')">The team</a>
+        <a href="#" class="tablink" onclick="openTab(event, 'joinUs')">Join us</a>
+      </div>
+      <div class="flex-fill"></div>
     </div>
   </section>
 
-  <section>
-    <div class="container">
 
-      <!-- Story tab -->
-      <div id="ourStory" class="tabcontent">
-        <div class="flex-container">
-          <div id="our-story-image">
-            <img src="img/chi-leti.jpg" alt="Chi & Leti, founders of Truffles Therapy" title="Chi & Leti, founders of Truffles Therapy">
-          </div>
-          <div id="our-story-text">
-            <h2 class="headline">How it all began</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          </div>
-          <div id="our-vision" class="standout">
-            <div class="standout-content">
-              <h2>Our Vision</h2>
-              <p>
-                We desire to accelerate
-              </p>
-            </div>
-          </div>
+  <!-- Story tab -->
+  <div id="ourStory" class="tabcontent">
+    <section>
+      <div class="container">
+        <h2 class="tabcontent-h2">How it all began</h2>
+        <div class="beginnings-container">
+          <figure class="beginnings-image-container">
+            <img src="img/chi-leti.jpg" alt="Chi & Leti, founders of Truffles Therapy" title="Chi & Leti, founders of Truffles Therapy" class="beginnings-image">
+            <figcaption>Chi & Leti, our founders</figcaption>
+          </figure>
+          <p class="tabtext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <p class="tabtext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p class="tabtext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+    </section>
+
+    <svg class="moving-waves-break" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="gentle-wave"
+        d="M-160 44c30 0
+        58-18 88-18s
+        58 18 88 18
+        58-18 88-18
+        58 18 88 18
+        v44h-352z" />
+      </defs>
+      <g class="parallax1">
+        <use xlink:href="#gentle-wave" x="50" y="3" fill="#f461c1"/>
+      </g>
+      <g class="parallax2">
+        <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2"/>
+      </g>
+      <g class="parallax3">
+        <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461c1"/>
+      </g>
+      <g class="parallax4">
+        <use xlink:href="#gentle-wave" x="50" y="6" fill="#2a1275"/>
+      </g>
+    </svg>
+    <section id="our-vision" class="standout">
+      <div class="container">
+        <div class="standout-content">
+          <h2 standout-h2>Our Vision</h2>
+          <p>We envision a world where all beings can experience true happiness and freedom; a world where those who feel a strong connection with psilocybin can experience its benefits in a safe & comfortable environment to heal, grow, and expand consciousness.</p>
         </div>
       </div>
-
-      <!-- Team tab -->
-      <div id="theTeam" class="tabcontent">
-        <h2 class="headline">The team</h2>
-      </div>
-
-      <!-- Join us tab -->
-      <div id="joinUs" class="tabcontent">
-        <h2 class="headline">Join us</h2>
-      </div>
-
     </div>
-  </section>
+
+    <section id="our-mission" class="standout">
+      <div class="container">
+        <div class="standout-content">
+          <h2 standout-h2>Our Mission</h2>
+          <p>We envision a world where all beings can experience true happiness and freedom; a world where those who feel a strong connection with psilocybin can experience its benefits in a safe & comfortable environment to heal, grow, and expand consciousness.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Team tab -->
+  <div id="theTeam" class="tabcontent">
+    <h2 class="headline">The team</h2>
+  </div>
+
+  <!-- Join us tab -->
+  <div id="joinUs" class="tabcontent">
+    <h2 class="headline">Join us</h2>
+  </div>
+
 
 
 
 
 <footer>
-  <div class="container">
-    <div class="newsletter">
-      <h2>Newsletter</h2>
-      <input type="email" placeholder="Email">
-    </div>
-  </div>
-
+  Copyrights.
 </footer>
+
 
 <!-- Transition debug script -->
 <script> </script>
 
 <!-- Horizontal tabs script start -->
 <script>
-function openTab(evt, tabName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active-tab";
   }
-  // Get all elements with class="tablinks" and remove the class "active-tab"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
-  }
-  // Show the current tab, and add an "active-tab" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active-tab";
-}
-  // Autoclick overview tab
-document.getElementById("default-tab").click();
+  document.getElementById("default-tab").click();
 </script>
 <!-- Horizontal tabs script end -->
 </body>
