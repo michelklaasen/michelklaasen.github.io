@@ -891,11 +891,20 @@ About page
 	text-align: center;
 }
 
-.standout-h2 {
+.standout-content {
+	padding: 3rem 0;
+}
+
+.standout-content > h2 {
 	margin-top: 0;
 }
 
-/* Our vision */
+.standout-content > p {
+	font-family: comfortaa;
+	font-size: 1.1em;
+}
+
+
 #our-vision {
 	background-color: #2a1275;
 	/* background-image: url("../img/night-sky.jpg"); */
@@ -904,7 +913,14 @@ About page
 	color: #fff;
 }
 
+#our-mission {
+	color: #de33ff;
+}
 
+#gratitude {
+	background-image: linear-gradient(#5e2de2, #5d1c8c);
+	color: #b3ffff;
+}
 
 .moving-waves-break {
   display: block;
