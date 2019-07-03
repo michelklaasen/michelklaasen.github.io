@@ -918,7 +918,7 @@ About page
 	z-index: 1;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
 	.page-break-overlay {
 		background-image: url("../img/about/page-break-top-large.png");
 		height: 56px;
@@ -934,6 +934,7 @@ About page
 	width: 100%;
 	/* background-color: rgba(0,0,0,0.3); */
 	z-index: 0;
+	pointer-events: none;
 }
 
 
@@ -953,6 +954,15 @@ About page
 @media (min-width: 1200px) {
 	#our-vision {
 		background-image: url("../img/about/night-sky-large.jpg");
+	}
+}
+
+#our-vision .standout-h2 {
+	margin-top: 36px;
+}
+@media (min-width: 800px) {
+	#our-vision .standout-h2 {
+		margin-top: 56px;
 	}
 }
 
