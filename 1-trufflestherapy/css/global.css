@@ -359,8 +359,11 @@ Top header navigation
 	transition: color .2s;
 }
 
-.header-menu-item:nth-child(2) {
+.middle-item-left {
 	margin: 0 30px;
+}
+.middle-item-right {
+	margin: 0 40px;
 }
 
 .header-menu-item:hover {
@@ -377,24 +380,24 @@ Top header navigation
 	}
 }
 
-@media (min-width: 1024px) {
-	.header-menu-item:nth-child(2) {
-		/* margin: 0 1rem; */
- }
- #header-menu-right, #header-menu-left {
-	/* text-align: center; */
- }
+@media (min-width: 950px) {
  #header-logo-container {
 	 margin: 0 69px;
  }
- .header-menu-item:nth-child(2) {
+ .middle-item-left {
 	 margin: 0 56px;
+ }
+ .middle-item-right {
+	 margin: 0 76px;
  }
 }
 
 @media (min-width: 1200px) {
-	.header-menu-item:nth-child(2) {
+	.middle-item-left {
 		margin: 0 76px;
+	}
+	.middle-item-right {
+		margin: 0 90px;
 	}
 }
 
