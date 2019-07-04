@@ -19,11 +19,9 @@ section {
 	overflow: hidden;
 }
 
-
-
 ul {
 	margin: 0;
-	padding-left:.75em;
+	padding-left: .75em;
 }
 
 img {
@@ -92,17 +90,26 @@ a button {
 }
 
 .flex-container {
-	display: block;
+	display: flex;
+	flex-flow: column nowrap;
 	height: 100%;
+	justify-content: center;
 }
 
-@media only screen and (min-width:420px) {
+.background-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+@media only screen and (min-width: 420px) {
 .flex-container {
-	display:flex;
-	justify-content:space-between;
+	flex-flow: row wrap;
+	justify-content: space-between;
 	height:100%;
 	align-items: center;
-	flex-flow: row wrap;
 	}
 }
 
@@ -305,7 +312,7 @@ Top header navigation
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 120px;
 		box-shadow:0 0 20px rgba(0,0,0,0.2);
 }
 
@@ -316,7 +323,7 @@ Top header navigation
 #header-menu-container {
 	height: 100%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	text-decoration: none;
 	text-align: center;
@@ -328,16 +335,16 @@ Top header navigation
 }
 
 #header-menu-left {
-	text-align: left;
+	text-align: right;
 }
 
 #header-menu-right {
-	text-align: right;
+	text-align: left;
 }
 
 #header-logo-container {
 	flex-basis: auto;
-	padding: 0 10px;
+	margin: 0 45px;
 }
 
 #header-logo {
@@ -345,15 +352,15 @@ Top header navigation
 }
 
 .header-menu-item {
-	color: #999;
+	color: #b3b3b3;
 	text-transform: lowercase;
 	font-family: comfortaa;
-	padding: 1rem;
+	font-size: 14px;
 	transition: color .2s;
 }
 
 .header-menu-item:nth-child(2) {
-	margin: 0;
+	margin: 0 30px;
 }
 
 .header-menu-item:hover {
@@ -372,17 +379,23 @@ Top header navigation
 
 @media (min-width: 1024px) {
 	.header-menu-item:nth-child(2) {
-		margin: 0 1rem;
+		/* margin: 0 1rem; */
  }
  #header-menu-right, #header-menu-left {
-	text-align: center;
+	/* text-align: center; */
+ }
+ #header-logo-container {
+	 margin: 0 69px;
+ }
+ .header-menu-item:nth-child(2) {
+	 margin: 0 56px;
  }
 }
 
 @media (min-width: 1200px) {
 	.header-menu-item:nth-child(2) {
-		margin: 0 2rem;
- }
+		margin: 0 76px;
+	}
 }
 
 /*----------------------------------------------
@@ -524,7 +537,7 @@ Horizontal tabs menu
 
 .page-title {
 	font-family: inherit;
-	font-size: 2em;
+	font-size: 20px;
 	text-align: center;
 	text-transform: lowercase;
 	margin: 0;
@@ -547,7 +560,8 @@ Horizontal tabs menu
 }
 
 .tablink {
-	color: #999;
+	color: #b3b3b3;
+	font-size: 14px;
 	font-family: inherit;
 	text-transform: lowercase;
 	margin: 0 8px;
@@ -600,7 +614,7 @@ Horizontal tabs menu
 		width: 90%;
 		max-width: 1200px;
 		margin: auto;
-		margin-top: 2em;
+		margin-top: 38.2px;
 		padding: 0;
 		display: flex;
 		justify-content: space-between;

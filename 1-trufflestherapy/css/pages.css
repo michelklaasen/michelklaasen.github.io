@@ -3,16 +3,14 @@ Homepage -Landing section
 ----------------------------------------------*/
 
 #landing-section {
-	background-image:url("../img/purple-mushrooms.jpg");
-	background-position:center;
-	background-size:cover;
-	box-sizing:border-box;
-	/* height:100vh; */
-	min-height:600px;
-	height:calc(100vh - 100px);
-	/*box-shadow:0 0 30px red;*/
+	background-color: #37039f;
+	background-image: url("../img/Home/amsterdam-canals-large-blur.jpg");
+	background-position: center;
+	background-size: cover;
+	min-height: 600px;
+	height: 100vh;
 	overflow:hidden;
-	background-attachment: scroll;
+	position: relative;
 }
 
 @media (min-width:1068px;) {
@@ -22,191 +20,181 @@ Homepage -Landing section
 }
 
 #landing-section .background-overlay {
-	height:100%;
-	background-color:rgba(0,0,0,0.3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #5C258D;
+	background: -webkit-linear-gradient(#4389A2, #5C258D);
+	background: linear-gradient(#4389A2, #5C258D);
+	opacity: .6;
 }
 
 #landing-section .container {
-	display:table;
-	height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
 }
 
-#landing-section #landing-content {
-	display:table-cell;
-	vertical-align:middle;
-	text-align:center;
-	color:white;
+#landing-content {
+	text-align: center;
+	color: white;
+	z-index: 1;
 }
 
-#landing-section #landing-content h1 {
-	font-size:90px;
-	font-family:Montserrat;
-	font-weight:900;
+#landing-content > h1 {
+	font-size: 40px;
+	font-size: 12vw;
+	font-family: Montserrat;
+	font-weight: 900;
 	font-style:normal;
 	text-transform: uppercase;
 	margin:0;
 }
 
-#landing-section #landing-content h3 {
+#landing-content > h2 {
 	font-family: comfortaa;
-	font-size:26px;
-	font-weight:300;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.5;
 	text-transform: lowercase;
-	margin:0 0 0.5em 0;
+	margin: .5em 0;
 }
 
+.exclamation {
+	font-size: 2em;
+}
 
 #landing-button {
-	margin-top:1em;
-	border-radius:50px;
-	padding:2em 6em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	border-radius: 50px;
+	padding: 2em;
 	font-size: 12px;
-	text-transform:uppercase;
-	letter-spacing:1.25px;
+	text-transform: uppercase;
+	letter-spacing: 1.25px;
+	background: #37039f;
+	color: white;
 }
 
-.section-shadow {
-	height:2px;
-	width:100%;
-	box-shadow:0 0 40px red;
-	position:relative;
-	z-index:2;
+@media (min-width: 600px) {
+	#landing-content > h1 {
+		font-size: 60px;
+	}
+	.exclamation {
+		font-size: 1em;
+	}
+}
+
+@media (min-width: 800px) {
+	#landing-section {
+		height: calc(100vh - 100px);
+	}
+	#landing-button {
+		width: 420px;
+	}
 }
 
 /*----------------------------------------------
 Homepage - Truffles section
 ----------------------------------------------*/
 
-.image-text {
-	height:100vh;
-	color:white;
-	font-size: 20px;
+.bg-image-section {
+	height: 100vh;
+	color: white;
+	font-size: 18px;
+	position: relative;
 }
 
-.image-text .flex-container p {
-	margin-bottom:2em;
+.bg-image-content-container {
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+	height: 100%;
 }
 
-.image-text .flex-container h2 {
+.bg-image-content {
+	flex-basis:45%;
+	z-index: 1;
+	position: relative;
+}
+
+.bg-image-title {
 	font-family: Montserrat;
 	font-size: 2.5em;
 	font-weight: 600;
+	margin: 0;
+	text-align: center;
 }
 
-.image-text .background-overlay {
-	height:100%;
-	background-color:rgba(0,0,0,0.5);
+.bg-image-button {
+	display: block;
+	text-align: center;
+	background: #37039f;
+	border-radius: 50px;
+	color: #fff;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 1.25px;
+	padding: 16px;
 }
 
-.image-text .flex-container div {
-	flex-basis:45%;
-}
-
-#truffles.image-text {
-	background:url('../img/truffles2.jpg');
+#truffles {
+	background:url('../img/home/truffles2.jpg');
 	background-size:cover;
 	background-position:right;
 	background-attachment: scroll;
 	box-shadow: inset 0 55vh 50vh -50vh rgba(0,0,0,0.5);
 }
 
-#experience.image-text {
-	background:url('../img/experience.jpg');
-	background-size:cover;
-	background-position:right;
+#truffles > .background-overlay {
+	background-color: #000;
+	opacity: .5;
+}
+
+#experience {
+	background-image: url('../img/home/ceremony-small.jpg');
+	background-size: cover;
+	background-position: right;
 	background-attachment: scroll;
-	text-align:right;
 }
 
-.background-image {
-	padding:200px;
+#experience > .background-overlay {
+	background-color: #000;
+	opacity: .2;
 }
 
-/* About truffles section V2 Mobile first */
-.side-image-section {
-	height: 100vh;
-	overflow: hidden;
+@media (min-width: 420px) {
+	#landing-section {
+		/* background-image: url(''); */
+	}
+	#experience {
+		/* background-image: url(''); */
+	}
+	#truffles {
+		/* background-image: url(''); */
+	}
 }
 
-.side-image-section .flex-container {
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-}
-
-.side-image-section .side-image {
-	width: 100%;
-	max-width: 500px;
-	max-height: 40vh;
-	min-height: 15vh;
-	height: auto;
-	border-radius: 10px;
-	margin-top: 2em;
-}
-
-.side-image-section .section-title {
-	margin: 0;
-	font-family: montserrat;
-	font-weight: 700;
-	text-align: center;
-	font-size: 2em;
-}
-
-.side-image-section .section-text {
-	margin: 1em 0;
-}
-
-.side-image-section .button {
-	display: block;
-	margin: 0 auto;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 0.75em;
-}
 
 @media (min-width: 800px) {
-	.side-image-section {
-		height: auto;
-		padding: 20vh 0;
-	}
-
-	.side-image-section .flex-container {
+	.bg-image-content-container {
 		flex-flow: row nowrap;
 		justify-content: space-between;
+		align-items: center;
 	}
-	.side-image-section .column {
-		flex-basis: 48%;
+	.bg-image-flex-fill {
+		flex: 1;
 	}
-	/* .side-image-section .column-image {
-		height: 50vh;
-		background: white url('../img/truffles2.jpg') no-repeat scroll center;
-		background-size: cover;
-		border-radius: 10px;
-	} */
-	.side-image-section .side-image {
-		margin: 0;
-	}
-	.side-image-section .section-title {
+	.bg-image-title {
 		text-align: left;
-		font-size: 3em;
-	}
-	.side-image-section .button {
-		width: 50%;
-		margin: 0;
-	}
-	.side-image-section .section-text {
-		font-size: 20px;
-	}
-	.side-image-section.side-image-reverse .column-text {
-		order: 2;
-	}
-	.side-image-section.side-image-reverse .section-title, .side-image-section.side-image-reverse .section-text {
-		text-align: right;
-	}
-	.side-image-section.side-image-reverse .button {
-		margin: 0 0 0 auto;
 	}
 }
+
 
 /*----------------------------------------------
 Learn page - resources
@@ -368,12 +356,20 @@ Learn page - resources
 	margin: 0;
 }
 
-::-webkit-scrollbar {
+@media (max-width: 800px) {
+	::-webkit-scrollbar {
+		display: none;
+	}
+	::-webkit-scrollbar:hover {
+	opacity: 1;
+	}
+}
+
+/* ::-webkit-scrollbar {
   display: none;
 }
 @media (min-width: 800px) {
 		.videos-container::-webkit-scrollbar {
-			/* display: block; */
 		}
 }
 ::-webkit-scrollbar {
@@ -395,7 +391,7 @@ Learn page - resources
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #b5b5b5;
-}
+} */
 
 
 .video-thumbnail-wrapper {
