@@ -4,19 +4,13 @@ Homepage -Landing section
 
 #landing-section {
 	background-color: #37039f;
-	background-image: url("../img/Home/amsterdam-canals-large-blur.jpg");
+	background-image: url("../img/home/amsterdam-canals-large-blur.jpg");
 	background-position: center;
 	background-size: cover;
 	min-height: 600px;
 	height: 100vh;
 	overflow:hidden;
 	position: relative;
-}
-
-@media (min-width:1068px;) {
-	section#landing-section {
-		min-height:750px;
-	}
 }
 
 #landing-section .background-overlay {
@@ -650,16 +644,16 @@ Retreats page - Group
 ----------------------------------------------*/
 
 #july-11 {
-	background-image: url("../img/retreats/group-retreat-jake-kobrin.jpg");
+	background-image: url("../img/retreats/group-retreat-july-11.jpg");
 }
 #aug-4 {
-	background-image: url("../img/retreats/group-retreat-group.jpg");
+	background-image: url("../img/retreats/group-retreat-aug-4.jpg");
 }
 #aug-23 {
-	background-image: url("../img/retreats/group-retreat-microdose.jpg");
+	background-image: url("../img/retreats/group-retreat-aug-23.jpg");
 }
 #sep-1 {
-	background-image: url("../img/retreats/group-retreat-ryan.jpg");
+	background-image: url("../img/retreats/group-retreat-sep-1.jpg");
 }
 #sep-15 {
 
