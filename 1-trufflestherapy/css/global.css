@@ -2,7 +2,7 @@
 Global CSS
 --------------------------------*/
 
-body, html {
+body {
 	font-family:"Open Sans", "Montserrat", sans-serif;
 	margin: 0;
 	padding: 0;
@@ -26,11 +26,12 @@ ul {
 
 img {
 	max-width: 100%;
+	object-fit: cover;
 }
 
-figcaption {
-	font-size: .875rem;
-	color: #aaa;
+figcaption, .figcaption {
+	font-size: 13px;
+	color: #b3aea9;
 	text-transform: lowercase;
 	text-align: center;
 	padding: .5em 0;
@@ -661,6 +662,14 @@ Horizontal tabs menu
 	font-size: 2em;
 	margin-top: 0;
 	color: #333;
+}
+
+.tabcontent h2 {
+	color: #33302e;
+	text-align: center;
+	font-weight: 700;
+	font-family: 'Montserrat';
+	font-size: 29px;
 }
 
 

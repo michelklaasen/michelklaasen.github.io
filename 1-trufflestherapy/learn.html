@@ -11,20 +11,20 @@
   <link rel="stylesheet" type-"text/css" href="css/global.css">
   <link rel="stylesheet" type-"text/css" href="css/pages.css">
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat:400,700|Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat:400,700|Crimson+Text|Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Fixed burger -->
   <div id="global-burger">
-      <div class="burger-container">
-        <div class="burger">
-          <div class="burger-line burger-line-top"></div>
-          <div class="burger-line burger-line-middle"></div>
-          <div class="burger-line burger-line-bottom"></div>
-        </div>
+    <div class="burger-container">
+      <div class="burger">
+        <div class="burger-line burger-line-top"></div>
+        <div class="burger-line burger-line-middle"></div>
+        <div class="burger-line burger-line-bottom"></div>
       </div>
     </div>
+  </div>
   <!-- Fullscreen navigation -->
   <nav id="fullscreen-nav" class>
     <div class="nav-container">
@@ -71,7 +71,6 @@
       </nav>
     </div>
   </header>
-
   <!-- Horizontal tabs menu -->
   <section id="learn-tabs" class="tabs">
     <div class="page-title-container">
@@ -82,35 +81,70 @@
         <h1 class="page-title-wide">Learn</h1>
       </div>
       <div class="tabs-inner">
-        <a href="#" class="tablink" onclick="openTab(event, 'Truffles')">Truffles</a>
+        <a id="default-tab" href="#" class="tablink" onclick="openTab(event, 'Truffles')">Truffles</a>
         <a href="#" class="tablink" onclick="openTab(event, 'History')">History</a>
-        <a id="default-tab" href="#" class="tablink" onclick="openTab(event, 'Resources')">Resources</a>
+        <a href="#" class="tablink" onclick="openTab(event, 'Resources')">Resources</a>
         <a href="#" class="tablink" onclick="openTab(event, 'Research')">Research</a>
         <a href="#" class="tablink" onclick="openTab(event, 'FAQ')">FAQ</a>
       </div>
       <div class="flex-fill"></div>
     </div>
   </section>
-
-
   <!-- Horizontal tabs content -->
     <!-- Truffles tab -->
-    <section id="Truffles" class="tabcontent">
-      <div class="container">
-        <h2 class="tabcontent-h2">About magic truffles & mushrooms</h2>
-      </div>
-    </section>
+    <div id="Truffles" class="tabcontent">
+      <article id="truffles-article">
+        <div class="container">
+          <section>
+            <h2 class="top-heading">What are magic truffles?</h2>
+            <picture>
+              <source media="(min-width: 550px)" srcset="img/learn/magic-truffles-large.jpg">
+              <img src="img/learn/magic-truffles-small.jpg" alt="Magic truffles Psilocybe Galindoii">
+              <figcaption>Psilocybe Galindoii</figcaption>
+            </picture>
+            <div class="text-container">
+            <p>Part of the fungi kingdom, magic truffles are the underground part of the well-known magic mushrooms, and contain the same psychoactive compounds psilocybin and psilocin. the official name for magic truffles is sclerotium (plural: sclerotia).
+            <p>In the soil where mushrooms grow, there is an entire network of mycelium, a white, stringy structure that grows outward  to find water and food so the mushroom, the fruiting body of the fungus, can grow. When the conditions (temperature, moisture, nutrients) are not right for mushrooms to grow, mycelium hardens into compact masses, or truffles, containing food and water reserves ready to be utilised by the fungus if and when growing conditions become optimal.</p>
+            <p>There are about 200 different kind of mushrooms on earth known to contain psilocybin and psilocin. Only a handful of these species are able to produce magic truffles.</p>
+            <p>In 2008, magic mushrooms were made illegal in the Netherlands (as they are in most other countries). However, since magic truffles differ from mushrooms, both technically and scientifically, they are 100% legal and widely produced, purchased, and consumed in the Netherlands, even though the psychoactive compound psilocybin is found in both fungi.</p>
+            </div>
+          </section>
+          <section>
+            <h2>History</h2>
+            <picture class="float-left">
+              <img src="img/learn/bee-shaman.jpg" alt="Painting of a shaman found in Algeria" class="floatleft">
+              <figcaption>the “bee shaman”, a cave painting found in algeria</figcaption>
+            </picture>
+            <div class="text-container">
+            <p>After the spanish conquered central and south america, catholic missionaries forbade the use of hallucinogenic plants and mushrooms, dismissing the Aztecs as devil-worshippers. still, people in some remote areas continued to use teonanácatl.</p>
+            <p>The first mention of magic mushrooms in european medicinal literature appeared in the london medical and physical journal in 1799: a man had served magic mushrooms he had picked for break</p>
+            <p>In 1955, the mushroom researcher Gordon Wasson and his wife Valentina became the first westerners to ever participate in an indigenous mushroom ceremony when they encountered Maria Sabina, a mexican mushroom shaman, with whom they experienced several overnight mushroom rituals. Upon Wassons’ return to the United States in 1957, he published the photo essay “seeking the magic mushroom” for life magazine recounting his experiences with Sabina. The doctor who treated them later described how the youngest child “was attacked with fits of immoderate laughter, nor could the threats of his father or mother refrain him.”</p>
+            <p>The story became a sensation and inspired early hippies to travel to Mexico in search of the magic mushrooms. The large scale production and use of magic mushrooms and other psychedelics during the hippy movement in the 60s and 70s, created a transformative cultural shift in the us and the rest of the world. In 1968, the United States banned psilocybin and in 1970, classified it as a schedule I drug (on par with heroin and cocaine). Psilocybin is still considered a schedule I drug, but with the emergence of new scientific studies, there are significant movements pushing for the legalization and/or decriminalization of psilocybin. The spiritual, mental, emotional benefits of magic mushrooms are slowly being brought to the light again.</p>
+            </div>
+          </section>
+          <section>
+            <h2>Effects</h2>
+            <picture>
+              <source media="(min-width: 550px)" srcset="img/learn/magic-truffles-effects-large.jpg">
+              <img src="img/learn/magic-truffles-effects-small.jpg" alt="The effects of magic truffles on brain connections.">
+              <figcaption>The effects of magic truffles on brain connections. Left is on placebo and right is on psilocybin.</figcaption>
+            </picture>
+            <p>Magic truffles and magic mushrooms have the same exact effects. The journeyer’s mindset and the environment in which she will experience the truffles (also known as set and setting) play a large factor in the pleasantness of his journey.</p>
+          </section>
+        </div>
+      </article>
+    </div>
 
     <!-- History tab -->
-    <section id="History" class="tabcontent">
+    <div id="History" class="tabcontent">
       <div class="container">
         <h2 class="tabcontent-h2">History</h2>
         <p>History of magic mooshrooms.</p>
       </div>
-    </section>
+    </div>
 
     <!-- Resources tab -->
-    <section id="Resources" class="tabcontent">
+    <div id="Resources" class="tabcontent">
       <div class="container">
         <!-- Ted talks -->
         <div id="videos-tedtalks" class="video-section-container">
@@ -670,23 +704,23 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Research tab -->
-    <section id="Research" class="tabcontent">
+    <div id="Research" class="tabcontent">
       <div class="container">
-      <h2 class="tabcontent-h2">Research</h2>
-      <p>Lots of testimonials.</p>
-    </div>
-    </section>
+        <h2 class="tabcontent-h2">Research</h2>
+        <p>Lots of testimonials.</p>
+      </div>
+  </div>
 
     <!-- FAQ content -->
-    <section id="FAQ" class="tabcontent">
+    <div id="FAQ" class="tabcontent">
       <div class="container">
         <h2 class="tabcontent-h2">FAQ</h2>
         <p>Lots of pictures.</p>
       </div>
-    </section>
+    </div>
 
   </div>
 

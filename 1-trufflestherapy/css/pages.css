@@ -189,6 +189,65 @@ Homepage - Truffles section
 	}
 }
 
+/*----------------------------------------------
+Learn page - about truffles
+----------------------------------------------*/
+#truffles-article .container {
+}
+
+#truffles-article h2 {
+	margin-top: 104px;
+	margin-bottom: 60px;
+}
+
+#truffles-article p {
+	font-family: 'Crimson Text';
+	font-size: 19px;
+	line-height: 1.6;
+	color: #534d4b;
+}
+
+#truffles-article img {
+	border-radius: 4px;
+	max-height: 350px;
+	display: block;
+	margin: auto;
+}
+
+#truffles-article .top-heading {
+	margin-top: 20px;
+}
+
+.text-container {
+	margin: 0 auto;
+	max-width: 740px;
+}
+
+
+
+@media (min-width: 550px) {
+	#truffles-article img {
+		min-height: 350px;
+		max-height: 500px;
+		object-fit: cover;
+	}
+	#truffles-article h2:first-child {
+		margin-top: 52px;
+	}
+}
+
+@media (min-width: 700px) {
+	.float-left {
+		float: left;
+		width: 33%;
+		min-width: 320px;
+		margin-right: 30px;
+	}
+}
+
+
+
+
 
 /*----------------------------------------------
 Learn page - resources
@@ -647,7 +706,8 @@ Retreats page - Group
 	background-image: url("../img/retreats/group-retreat-july-11.jpg");
 }
 #aug-4 {
-	background-image: url("../img/retreats/group-retreat-aug-4.jpg");
+	background-image: url("../img/retreats/group-retreat-aug-4-large.jpg");
+	/* Resize image */
 }
 #aug-23 {
 	background-image: url("../img/retreats/group-retreat-aug-23.jpg");
