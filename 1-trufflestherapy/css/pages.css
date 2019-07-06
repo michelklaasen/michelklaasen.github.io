@@ -14,14 +14,9 @@ Homepage -Landing section
 }
 
 #landing-section .background-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
 	background: #5C258D;
 	background: -webkit-linear-gradient(#4389A2, #5C258D);
-	background: linear-gradient(#4389A2, #5C258D);
+	background: linear-gradient(#013, #37039f);
 	opacity: .6;
 }
 
@@ -67,8 +62,8 @@ Homepage -Landing section
 	margin-right: auto;
 	margin-top: 1em;
 	border-radius: 50px;
-	padding: 2em;
-	font-size: 12px;
+	padding: 19px;
+	font-size: 13px;
 	text-transform: uppercase;
 	letter-spacing: 1.25px;
 	background: #37039f;
@@ -219,11 +214,13 @@ Learn page - about truffles
 }
 
 .text-container {
-	margin: 0 auto;
-	max-width: 740px;
+	/* margin: 0 auto;
+	max-width: 740px; */
 }
 
-
+#effects-image {
+	border: 1px solid #ede7e3;
+}
 
 @media (min-width: 550px) {
 	#truffles-article img {
@@ -244,10 +241,6 @@ Learn page - about truffles
 		margin-right: 30px;
 	}
 }
-
-
-
-
 
 /*----------------------------------------------
 Learn page - resources
@@ -993,7 +986,7 @@ About page
 	background-image: url("../img/about/night-sky-small.jpg");
 	background-size: cover;
 	background-position: center;
-	color: #fff;
+	color: #fff !important;
 	margin-top: 4rem;
 }
 @media (min-width: 650px) {
