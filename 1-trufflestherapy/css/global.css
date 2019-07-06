@@ -64,13 +64,17 @@ a.button {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin:0.75em 0 0.5em 0;
-	font-family: montserrat;
+	margin: 0.75em 0 0.5em 0;
+	font-family: 'Montserrat';
 	line-height: 1.25;
 }
 
 h2 {
-	font-size: 2em;
+	color: #33302e;
+	text-align: center;
+	font-weight: 700;
+	font-family: 'Montserrat';
+	font-size: 29px;
 }
 
 h3 {
@@ -665,13 +669,13 @@ Horizontal tabs menu
 	color: #333;
 }
 
-.tabcontent h2 {
+/* .tabcontent h2 {
 	color: #33302e;
 	text-align: center;
 	font-weight: 700;
 	font-family: 'Montserrat';
 	font-size: 29px;
-}
+} */
 
 
 @media (min-width: 480px) {
