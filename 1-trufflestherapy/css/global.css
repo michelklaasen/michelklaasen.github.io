@@ -21,7 +21,11 @@ section {
 
 ul {
 	margin: 0;
-	padding-left: .75em;
+	padding-left: 1.5rem;
+}
+
+li {
+	padding-left: 6px;
 }
 
 img {
@@ -117,6 +121,10 @@ a button {
 	height:100%;
 	align-items: center;
 	}
+}
+
+.top-heading {
+	margin-top: 0 !important;
 }
 
 .xscroll-container {
@@ -310,23 +318,177 @@ Navigation
 /*--------------------------------
 Top header navigation
 --------------------------------*/
-
 #header {
-		display: none;
+		/* display: none; */
 		background-color: white;
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 120px;
-		box-shadow:0 0 20px rgba(0,0,0,0.2);
+    height: 80px;
+		box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-#header .container {
-	width: calc(90% + 2rem);
+.desktop-header {
+	height: 100%;
+	display: none;
+}
+.mobile-header {
+	height: 100%;
 }
 
-#header-menu-container {
+#header-menu-container-small {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+#header-menu-container-small > div {
+	flex: 1;
+}
+
+.header-page-title {
+	text-align: center;
+	color: #999;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+#header-logo-mobile {
+	height: 40px;
+	display: block;
+	margin-left: auto;
+}
+
+.hamburger-container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#hamburger-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100%;
+	cursor: pointer;
+}
+
+.hamburger-line {
+	width: 32px;
+	height: 2px;
+	border-radius: 10px;
+	background-color: #37039f;
+	transition: transform .25s ease-out;
+}
+
+.hamburger-line-top {
+	transform: translateY(-5px);
+}
+.hamburger-line-bottom {
+	transform: translateY(5px);
+}
+
+#hamburger-wrapper.open .hamburger-line-top {
+	transform: rotateZ(225deg) translateY(-1px);
+}
+#hamburger-wrapper.open	.hamburger-line-bottom {
+	transform: rotateZ(135deg) translateY(1px);
+}
+
+/* Dropdown */
+.fixed {
+	position: fixed;
+}
+
+#dropdown {
+	pointer-events: none;
+	opacity: 0;
+	box-sizing: border-box;
+	position: fixed;
+	top: 80px;
+	left: 0px;
+	width: 100%;
+	z-index: 5;
+	min-height: 100px;
+	background-color: #fff;
+	animation: fade-in-down;
+	transition: .3s;
+	border-bottom: 2px solid #eee;
+	border-top: 2px solid #eee;
+	/* border: 2px solid #aaa; */
+}
+
+#dropdown.open {
+	pointer-events: all;
+	opacity: 1;
+}
+
+.dropdown-menu-wrapper {
+	padding: 8px 0;
+}
+
+.dropdown-menu-icon {
+	display: inline;
+	height: 26px;
+	margin-right: 16px;
+}
+
+.dropdown-menu-item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 8px 0;
+	color: #b3b3b3;
+}
+
+.dropdown-menu-item:hover {
+	color: #c74fff;
+}
+
+.dropdown-menu-item-text {
+	font-size: 16px;
+	font-family: 'Comfortaa';
+	text-transform: lowercase;
+}
+
+@-webkit-keyframes fade-in-down {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fade-in-down {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+/* Dextop menu */
+#header-menu-container-large {
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -383,7 +545,17 @@ Top header navigation
 
 @media (min-width: 800px) {
 	#header {
+		/* display: block; */
+		height: 120px;
+	}
+	.desktop-header {
 		display: block;
+	}
+	.mobile-header {
+		display: none;
+	}
+	#header .container {
+		width: calc(90% + 2rem);
 	}
 }
 
@@ -392,10 +564,10 @@ Top header navigation
 	 margin: 0 69px;
  }
  .middle-item-left {
-	 margin: 0 56px;
+	 margin: 0 40px;
  }
  .middle-item-right {
-	 margin: 0 76px;
+	 margin: 0 65px;
  }
 }
 
@@ -543,6 +715,7 @@ Horizontal tabs menu
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	display: none; /* here */
 }
 
 .page-title {
@@ -567,7 +740,14 @@ Horizontal tabs menu
 	flex-flow: row nowrap;
 	margin-bottom: -1px;
 	overflow-x: auto;
+	padding-top: 12px;
 }
+@media (max-width: 479px) {
+	#about-tabs .tabs-inner {
+		justify-content: center;
+	}
+}
+
 
 .tablink {
 	color: #b3b3b3;
@@ -632,6 +812,7 @@ Horizontal tabs menu
 	.tabs-inner {
 		display: flex;
 		justify-content: center;
+		padding-top: 0;
 	}
 	.tablink {
 		margin: 0 2em;

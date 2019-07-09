@@ -4,7 +4,7 @@ Homepage -Landing section
 
 #landing-section {
 	background-color: #37039f;
-	background-image: url("../img/home/amsterdam-canals-large-blur.jpg");
+	background-image: url("../img/home/purple-mushrooms.jpg");
 	background-position: center;
 	background-size: cover;
 	min-height: 600px;
@@ -17,7 +17,7 @@ Homepage -Landing section
 	background: #5C258D;
 	background: -webkit-linear-gradient(#4389A2, #5C258D);
 	background: linear-gradient(#013, #37039f);
-	opacity: .6;
+	opacity: .2;
 }
 
 #landing-section .container {
@@ -50,6 +50,7 @@ Homepage -Landing section
 	line-height: 1.5;
 	text-transform: lowercase;
 	margin: .5em 0;
+	color: #fff;
 }
 
 .exclamation {
@@ -118,6 +119,7 @@ Homepage - Truffles section
 	font-weight: 600;
 	margin: 0;
 	text-align: center;
+	color: #fff;
 }
 
 .bg-image-button {
@@ -187,30 +189,34 @@ Homepage - Truffles section
 /*----------------------------------------------
 Learn page - about truffles
 ----------------------------------------------*/
-#truffles-article .container {
+.article .container {
 }
 
-#truffles-article h2 {
+.article h2 {
 	margin-top: 104px;
 	margin-bottom: 60px;
 }
 
-#truffles-article p {
+.article p, .article li {
 	font-family: 'Crimson Text';
 	font-size: 19px;
 	line-height: 1.6;
 	color: #534d4b;
 }
 
-#truffles-article img {
+.article img {
 	border-radius: 4px;
 	max-height: 350px;
 	display: block;
 	margin: auto;
 }
 
-#truffles-article .top-heading {
-	margin-top: 20px;
+.note {
+	box-sizing: border-box;
+	border: 1px solid #bbb;
+	border-radius: 4px;
+	background-color: #f2f2f2;
+	padding: .5em 1em;
 }
 
 .text-container {
@@ -223,13 +229,13 @@ Learn page - about truffles
 }
 
 @media (min-width: 550px) {
-	#truffles-article img {
+	.article img {
 		min-height: 350px;
 		max-height: 500px;
 		object-fit: cover;
 	}
-	#truffles-article h2:first-child {
-		margin-top: 52px;
+	.article h2:first-child {
+		/* margin-top: 52px; */
 	}
 }
 
@@ -986,9 +992,13 @@ About page
 	background-image: url("../img/about/night-sky-small.jpg");
 	background-size: cover;
 	background-position: center;
-	color: #fff !important;
 	margin-top: 4rem;
 }
+
+#our-vision p, #our-vision h2 {
+	color: #fff;
+}
+
 @media (min-width: 650px) {
 	#our-vision {
 		background-image: url("../img/about/night-sky-large.jpg");
@@ -1009,7 +1019,7 @@ About page
 	}
 }
 
-#our-mission {
+#our-mission p, #our-mission h2 {
 	color: #de33ff;
 }
 
@@ -1017,6 +1027,10 @@ About page
 	background-image: linear-gradient(#5e2de2, #5d1c8c);
 	color: #b3ffff;
 	margin: 0;
+}
+
+#gratitude p, #gratitude h2 {
+	color: #b3ffff;
 }
 
 /* Crazy moving waves page break */

@@ -10,28 +10,80 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat:400,700|Open+Sans&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body">
 
   <!-- Header & Co -->
   <header id ="header">
     <div class="container">
-      <nav id="header-menu-container">
-        <div id="header-menu-left">
-          <a href="learn.html" class="header-menu-item">Learn</a>
-          <a href="experience.html" class="header-menu-item middle-item-right">Experience</a>
-          <a href="retreats.html" class="header-menu-item">Retreats</a>
+      <div class="desktop-header">
+        <div id="header-menu-container-large">
+          <nav id="header-menu-left">
+            <a href="learn.html" class="header-menu-item">Learn</a>
+            <a href="experience.html" class="header-menu-item middle-item-right">Experience</a>
+            <a href="retreats.html" class="header-menu-item">Retreats</a>
+          </nav>
+          <div id="header-logo-container">
+            <a href="index.html">
+              <img src="img/heart-mushroom-logo-small.png" alt="Trufflestherapy Logo" id="header-logo">
+            </a>
+          </div>
+          <nav id="header-menu-right">
+            <a href="about.html" class="header-menu-item active">About</a>
+            <a href="blog.html" class="header-menu-item middle-item-right">Blog</a>
+            <a href="connect.html" class="header-menu-item">Connect</a>
+          </nav>
         </div>
-        <div id="header-logo-container">
-          <a href="index.html">
-            <img src="img/heart-mushroom-logo-small.png" alt="Trufflestherapy Logo" id="header-logo">
-          </a>
+      </div>
+      <div class="mobile-header">
+        <!-- Header -->
+        <div id="header-menu-container-small">
+          <div class="hamburger-container">
+            <div id="hamburger-wrapper" onclick="toggleThatBurger()">
+              <div class="hamburger-line hamburger-line-top"></div>
+              <div class="hamburger-line hamburger-line-bottom"></div>
+            </div>
+          </div>
+          <div class="header-page-title-container">
+            <h1 class="header-page-title oldschool">About</h1>
+          </div>
+          <div class="header-mobile-logo-container">
+            <a href="index.html">
+              <img src="img/heart-mushroom-logo-small.png" alt="Trufflestherapy Logo" id="header-logo-mobile">
+            </a>
+          </div>
         </div>
-        <div id="header-menu-right">
-          <a href="about.html" class="header-menu-item active">About</a>
-          <a href="blog.html" class="header-menu-item middle-item-right">Blog</a>
-          <a href="connect.html" class="header-menu-item">Connect</a>
+        <!-- Dropdown -->
+        <div id="dropdown" class="fade-in-down">
+          <div class="container">
+            <div class="dropdown-menu-wrapper">
+              <a class="dropdown-menu-item" href="learn.html">
+                <img src="img/icons/heart-eye-icon.png" alt="Icon"  class="dropdown-menu-icon">
+                <span class="dropdown-menu-item-text">Learn</span>
+              </a>
+              <a class="dropdown-menu-item" href="learn.html">
+                <img src="img/icons/heart-eye-icon.png" alt="Icon" class="dropdown-menu-icon">
+                <span class="dropdown-menu-item-text">Experience</span>
+              </a>
+              <a class="dropdown-menu-item" href="learn.html">
+                <img src="img/icons/heart-eye-icon.png" alt="Icon" class="dropdown-menu-icon">
+                <span class="dropdown-menu-item-text">Retreats</span>
+              </a>
+              <a class="dropdown-menu-item" href="learn.html">
+                <img src="img/icons/heart-eye-icon.png" alt="Icon" class="dropdown-menu-icon">
+                <span class="dropdown-menu-item-text">About</span>
+              </a>
+              <a class="dropdown-menu-item" href="learn.html">
+                <img src="img/icons/heart-eye-icon.png" alt="Icon" class="dropdown-menu-icon">
+                <span class="dropdown-menu-item-text">Blog</span>
+              </a>
+              <a class="dropdown-menu-item" href="learn.html">
+                <img src="img/icons/heart-eye-icon.png" alt="Icon" class="dropdown-menu-icon">
+                <span class="dropdown-menu-item-text">Connect</span>
+              </a>
+            </div>
+          </div>
         </div>
-      </nav>
+      </div>
     </div>
   </header>
 
@@ -149,6 +201,18 @@
 <footer>
   Copyrights.
 </footer>
+
+<!-- Mobile menu opener -->
+<script>
+function toggleThatBurger() {
+   var burger = document.getElementById("hamburger-wrapper");
+   burger.classList.toggle("open");
+   var dropdown = document.getElementById("dropdown");
+   dropdown.classList.toggle("open")
+   var body = document.getElementById("body");
+   body.classList.toggle("fixed");
+}
+</script>
 
 
 <!-- Transition debug script -->
