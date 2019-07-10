@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About | Truffles Therapy</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+
   <!-- CSS -->
   <link rel="stylesheet" type-"text/css" href="css/global.css">
   <link rel="stylesheet" type-"text/css" href="css/pages.css">
@@ -35,16 +37,12 @@
         </div>
       </div>
       <div class="mobile-header">
-        <!-- Header -->
         <div id="header-menu-container-small">
           <div class="hamburger-container">
             <div id="hamburger-wrapper" onclick="toggleThatBurger()">
               <div class="hamburger-line hamburger-line-top"></div>
               <div class="hamburger-line hamburger-line-bottom"></div>
             </div>
-          </div>
-          <div class="header-page-title-container">
-            <h1 class="header-page-title oldschool">About</h1>
           </div>
           <div class="header-mobile-logo-container">
             <a href="index.html">
@@ -53,31 +51,25 @@
           </div>
         </div>
         <!-- Dropdown -->
-        <div id="dropdown" class="fade-in-down">
+        <div id="dropdown">
           <div class="container">
             <div class="dropdown-menu-wrapper">
               <a class="dropdown-menu-item" href="learn.html">
-                <img src="img/icons/heart-eye-icon.png" alt="Icon"  class="dropdown-menu-icon">
                 <span class="dropdown-menu-item-text">Learn</span>
               </a>
-              <a class="dropdown-menu-item" href="learn.html">
-                <img src="img/icons/heart-eye-icon.png" alt="Icon" class="dropdown-menu-icon">
+              <a class="dropdown-menu-item" href="experience.html">
                 <span class="dropdown-menu-item-text">Experience</span>
               </a>
-              <a class="dropdown-menu-item" href="learn.html">
-                <img src="img/icons/heart-eye-icon.png" alt="Icon" class="dropdown-menu-icon">
+              <a class="dropdown-menu-item" href="retreats.html">
                 <span class="dropdown-menu-item-text">Retreats</span>
               </a>
-              <a class="dropdown-menu-item" href="learn.html">
-                <img src="img/icons/heart-eye-icon.png" alt="Icon" class="dropdown-menu-icon">
-                <span class="dropdown-menu-item-text">About</span>
+              <a class="dropdown-menu-item" href="about.html">
+                <span class="dropdown-menu-item-text active">About</span>
               </a>
-              <a class="dropdown-menu-item" href="learn.html">
-                <img src="img/icons/heart-eye-icon.png" alt="Icon" class="dropdown-menu-icon">
+              <a class="dropdown-menu-item" href="blog.html">
                 <span class="dropdown-menu-item-text">Blog</span>
               </a>
-              <a class="dropdown-menu-item" href="learn.html">
-                <img src="img/icons/heart-eye-icon.png" alt="Icon" class="dropdown-menu-icon">
+              <a class="dropdown-menu-item" href="connect.html">
                 <span class="dropdown-menu-item-text">Connect</span>
               </a>
             </div>
@@ -204,14 +196,14 @@
 
 <!-- Mobile menu opener -->
 <script>
-function toggleThatBurger() {
-   var burger = document.getElementById("hamburger-wrapper");
-   burger.classList.toggle("open");
-   var dropdown = document.getElementById("dropdown");
-   dropdown.classList.toggle("open")
-   var body = document.getElementById("body");
-   body.classList.toggle("fixed");
-}
+  function toggleThatBurger() {
+     var burger = document.getElementById("hamburger-wrapper");
+     burger.classList.toggle("open");
+     var dropdown = document.getElementById("dropdown");
+     dropdown.classList.toggle("open")
+     var body = document.getElementById("body");
+     body.classList.toggle("fixed");
+  }
 </script>
 
 

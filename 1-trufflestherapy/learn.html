@@ -12,65 +12,76 @@
   <link rel="stylesheet" type-"text/css" href="css/pages.css">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat:400,700|Crimson+Text|Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Literata|PT+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Fixed burger -->
-  <div id="global-burger">
-    <div class="burger-container">
-      <div class="burger">
-        <div class="burger-line burger-line-top"></div>
-        <div class="burger-line burger-line-middle"></div>
-        <div class="burger-line burger-line-bottom"></div>
-      </div>
-    </div>
-  </div>
-  <!-- Fullscreen navigation -->
-  <nav id="fullscreen-nav" class>
-    <div class="nav-container">
-        <div class="nav-section">
-        <a href="index.html">
-          <img src="img/heart-mushroom-logo2.png" class="fullscreen-nav-logo"  alt="TrufflesTherapy Logo">
-        </a>
-      </div>
-      <div class="nav-section-menu">
-        <a class="fullscreen-nav-item main-nav-active" href="learn.html">
-          <img src="img/icons/plus-icon.png" class="fullscreen-nav-icon">Learn</a>
-        <a class="fullscreen-nav-item" href="experience.html">
-          <img src="img/icons/human-icon.png" class="fullscreen-nav-icon">Experience</a>
-        <a class="fullscreen-nav-item" href="retreats.html">
-          <img src="img/icons/settings-icon.png" class="fullscreen-nav-icon">Retreats</a>
-        <a class="fullscreen-nav-item" href="about.html">
-          <img src="img/icons/browser-icon.png" class="fullscreen-nav-icon">About</a>
-        <a class="fullscreen-nav-item" href="blog.html">
-          <img src="img/icons/attached-icon.png" class="fullscreen-nav-icon">Blog</a>
-        <a class="fullscreen-nav-item" href="connect.html">
-          <img src="img/icons/share-icon.png" class="fullscreen-nav-icon">Connect</a>
-      </div>
-    </div>
-  </nav>
   <!-- Header & Co -->
   <header id ="header">
     <div class="container">
-      <nav id="header-menu-container">
-        <div id="header-menu-left">
-          <a href="learn.html" class="header-menu-item active">Learn</a>
-          <a href="experience.html" class="header-menu-item middle-item-right">Experience</a>
-          <a href="retreats.html" class="header-menu-item">Retreats</a>
+      <div class="desktop-header">
+        <div id="header-menu-container-large">
+          <nav id="header-menu-left">
+            <a href="learn.html" class="header-menu-item active">Learn</a>
+            <a href="experience.html" class="header-menu-item middle-item-right">Experience</a>
+            <a href="retreats.html" class="header-menu-item">Retreats</a>
+          </nav>
+          <div id="header-logo-container">
+            <a href="index.html">
+              <img src="img/heart-mushroom-logo-small.png" alt="Trufflestherapy Logo" id="header-logo">
+            </a>
+          </div>
+          <nav id="header-menu-right">
+            <a href="about.html" class="header-menu-item">About</a>
+            <a href="blog.html" class="header-menu-item middle-item-right">Blog</a>
+            <a href="connect.html" class="header-menu-item">Connect</a>
+          </nav>
         </div>
-        <div id="header-logo-container">
-          <a href="index.html">
-            <img src="img/HeartMushroom2.png" alt="Trufflestherapy Logo" id="header-logo">
-          </a>
+      </div>
+      <div class="mobile-header">
+        <div id="header-menu-container-small">
+          <div class="hamburger-container">
+            <div id="hamburger-wrapper" onclick="toggleThatBurger()">
+              <div class="hamburger-line hamburger-line-top"></div>
+              <div class="hamburger-line hamburger-line-bottom"></div>
+            </div>
+          </div>
+          <div class="header-mobile-logo-container">
+            <a href="index.html">
+              <img src="img/heart-mushroom-logo-small.png" alt="Trufflestherapy Logo" id="header-logo-mobile">
+            </a>
+          </div>
         </div>
-        <div id="header-menu-right">
-          <a href="about.html" class="header-menu-item">About</a>
-          <a href="blog.html" class="header-menu-item middle-item-right">Blog</a>
-          <a href="connect.html" class="header-menu-item">Connect</a>
+        <!-- Dropdown -->
+        <div id="dropdown" class="fade-in-down">
+          <div class="container">
+            <div class="dropdown-menu-wrapper">
+              <a class="dropdown-menu-item" href="learn.html">
+                <span class="dropdown-menu-item-text active">Learn</span>
+              </a>
+              <a class="dropdown-menu-item" href="experience.html">
+                <span class="dropdown-menu-item-text">Experience</span>
+              </a>
+              <a class="dropdown-menu-item" href="retreats.html">
+                <span class="dropdown-menu-item-text">Retreats</span>
+              </a>
+              <a class="dropdown-menu-item" href="about.html">
+                <span class="dropdown-menu-item-text">About</span>
+              </a>
+              <a class="dropdown-menu-item" href="blog.html">
+                <span class="dropdown-menu-item-text">Blog</span>
+              </a>
+              <a class="dropdown-menu-item" href="connect.html">
+                <span class="dropdown-menu-item-text">Connect</span>
+              </a>
+            </div>
+          </div>
         </div>
-      </nav>
+      </div>
     </div>
   </header>
+
+
   <!-- Horizontal tabs menu -->
   <section id="learn-tabs" class="tabs">
     <div class="page-title-container">
@@ -131,7 +142,6 @@
             </picture>
             <p>Magic truffles and magic mushrooms have the same exact effects. The journeyer’s mindset and the environment in which she will experience the truffles (also known as set and setting) play a large factor in the pleasantness of his journey.</p>
             <p>After consuming truffles you will start noticing the first effects after about 30 to 60 minutes. The duration of a truffle journey ranges between 4 and 6 hours, depending on several factors including preparation method, metabolism, body weight, previous experience with psychedelics, tolerance from a recent psilocybin experience, and amount and strength of truffles used. there is usually a “peak,” from hours 2-4 in which journeyers may experience more vivid visuals and distortions in reality.</p>
-            <p><b>Capitalize down here</b></p>
             <p>Everyone experiences truffles in his or her own different way, but the most reported effects are alterations in:</p>
             <ul>
               <li>Sensory perception — sounds, visions and physical sensations intensify. Colors are usually perceived as more intense, objects may appear wavy or pulsating, as well as bigger or smaller than they actually are. Sounds are often perceived in a clearer, more enveloping and intense way. Music can take on a profound sense of cadence and depth. Some users experience synesthesia, wherein they perceive, for example, a visualization of color upon hearing a particular sound. With higher doses, visual and auditory hallucinations can occur;</li>
@@ -761,6 +771,23 @@
   </div>
 
 
+
+
+
+
+
+
+<!-- Mobile menu opener -->
+<script>
+  function toggleThatBurger() {
+     var burger = document.getElementById("hamburger-wrapper");
+     burger.classList.toggle("open");
+     var dropdown = document.getElementById("dropdown");
+     dropdown.classList.toggle("open")
+     var body = document.getElementById("body");
+     body.classList.toggle("fixed");
+  }
+</script>
 
 
 <!-- LEARN PAGE - Horizontal scrolling script -->

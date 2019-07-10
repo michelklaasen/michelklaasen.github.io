@@ -35,6 +35,7 @@ img {
 }
 
 figcaption, .figcaption {
+	font-family: 'Comfortaa';
 	font-size: 13px;
 	color: #b3aea9;
 	text-transform: lowercase;
@@ -144,65 +145,6 @@ a button {
 /*--------------------------------
 Navigation
 --------------------------------*/
-
-
-/* Mobile navigation bar retreats page */
-#mnav {
-	position: fixed;
-	bottom: 0;
-	width: 100vw;
-	background: white;
-	height: 90px;
-	overflow: hidden;
-	box-shadow: 0 0 10px rgba(0,0,0,0.3);
-	z-index: 420421;
-	font-weight: 500; /* some typography */
-	font-family: Comfortaa;
-	text-transform: lowercase;
-	color: #999;
-}
-
-#mnav .mnav-container {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: center;
-	height: 100%;
-}
-
-#mnav .mnav-container .mnav-box {
-	height: 100%;
-	flex-basis: 22%;
-}
-
-#mnav .mnav-container .mnav-box .mnav-content {
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-}
-
-#mnav .mnav-container .mnav-box .mnav-content:hover {
-	background: #eee;
-}
-
-#mnav .mnav-container .mnav-box .mnav-content .mnav-icon {
-	display: block;
-	margin: 0;
-	height: auto;
-	width: auto;
-	height: 32px;
-}
-
-#mnav .mnav-container .mnav-box .mnav-content .mnav-text {
-	color: #999;
-	text-align: center;
-	font-size: .8rem;
-	font-weight: inherit;
-	margin: .5em 0 0 0;
-}
 
 /* Hamburger  */
 .burger-container {
@@ -348,15 +290,8 @@ Top header navigation
 	flex: 1;
 }
 
-.header-page-title {
-	text-align: center;
-	color: #999;
-	font-weight: 400;
-	font-size: 18px;
-}
-
 #header-logo-mobile {
-	height: 40px;
+	height: 50px;
 	display: block;
 	margin-left: auto;
 }
@@ -416,8 +351,8 @@ Top header navigation
 	background-color: #fff;
 	animation: fade-in-down;
 	transition: .3s;
-	border-bottom: 2px solid #eee;
-	border-top: 2px solid #eee;
+	border-bottom: 2px solid #ddd;
+	/* border-top: 2px solid #eee; */
 	/* border: 2px solid #aaa; */
 }
 
@@ -430,17 +365,12 @@ Top header navigation
 	padding: 8px 0;
 }
 
-.dropdown-menu-icon {
-	display: inline;
-	height: 26px;
-	margin-right: 16px;
-}
-
 .dropdown-menu-item {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	padding: 8px 0;
+	transition: .25s;
 	color: #b3b3b3;
 }
 
@@ -449,7 +379,7 @@ Top header navigation
 }
 
 .dropdown-menu-item-text {
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'Comfortaa';
 	text-transform: lowercase;
 }
@@ -740,7 +670,7 @@ Horizontal tabs menu
 	flex-flow: row nowrap;
 	margin-bottom: -1px;
 	overflow-x: auto;
-	padding-top: 12px;
+	padding-top: 5.2px;
 }
 @media (max-width: 479px) {
 	#about-tabs .tabs-inner {
@@ -754,7 +684,7 @@ Horizontal tabs menu
 	font-size: 14px;
 	font-family: inherit;
 	text-transform: lowercase;
-	margin: 0 8px;
+	margin-left: 20px;
 	padding: 1.5em 0;
 	cursor: pointer;
 	-webkit-transition: border-bottom .3s ease;
@@ -794,8 +724,7 @@ Horizontal tabs menu
 		justify-content: center;
 	}
 	.tablink {
-		margin-left: 1em;
-		margin-right: 1em;
+		margin-left: 28px;
 	}
 }
 
@@ -804,7 +733,7 @@ Horizontal tabs menu
 		width: 90%;
 		max-width: 1200px;
 		margin: auto;
-		margin-top: 38.2px;
+		margin-top: 40.2px;
 		padding: 0;
 		display: flex;
 		justify-content: space-between;
@@ -815,22 +744,13 @@ Horizontal tabs menu
 		padding-top: 0;
 	}
 	.tablink {
-		margin: 0 2em;
+		margin-left: 52px;
 	}
 	.page-title-container {
 		display: none;
 	}
 	.page-title-wide {
 		display: block;
-	}
-	#retreats-tabs .tablink {
-		margin: 0 1.25em;
-	}
-}
-
-@media(min-width: 1000px) {
-	#retreats-tabs .tablink {
-		margin: 0 2em;
 	}
 }
 
@@ -845,7 +765,7 @@ Horizontal tabs menu
 	font-family: 'Montserrat';
 	text-align: center;
 	font-weight: 700;
-	font-size: 2em;
+	font-size: 29px;
 	margin-top: 0;
 	color: #333;
 }
@@ -861,7 +781,7 @@ Horizontal tabs menu
 
 @media (min-width: 480px) {
 	.tabcontent h2 {
-		font-size: 2.5em;
+		font-size: 29px;
 	}
 }
 
