@@ -750,7 +750,7 @@ Horizontal tabs menu
 		display: none;
 	}
 	.page-title-wide {
-		display: block;
+		/* display: block; */
 	}
 }
 

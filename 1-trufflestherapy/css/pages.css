@@ -886,6 +886,10 @@ Retreats page - Group
 	margin: auto;
 }
 
+.commitment-title {
+	color: white;
+}
+
 @media (min-width: 870px) {
 	.commitment-container {
 		flex-basis: 75%;
