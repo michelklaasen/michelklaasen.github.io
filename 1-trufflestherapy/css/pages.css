@@ -89,9 +89,7 @@ Homepage -Landing section
 	}
 }
 
-/*----------------------------------------------
-Homepage - Truffles section
-----------------------------------------------*/
+/* Homepage - Truffles section */
 
 .bg-image-section {
 	height: 100vh;
@@ -189,6 +187,7 @@ Homepage - Truffles section
 /*----------------------------------------------
 Learn page - about truffles
 ----------------------------------------------*/
+
 .article .container {
 }
 
@@ -202,6 +201,7 @@ Learn page - about truffles
 	font-size: 19px;
 	line-height: 1.6;
 	color: #534d4b;
+	opacity: .8;
 }
 
 .article img {
@@ -241,7 +241,7 @@ Learn page - about truffles
 
 @media (min-width: 700px) {
 	.float-left {
-		float: left;
+		/* float: left; */
 		width: 33%;
 		min-width: 320px;
 		margin-right: 30px;
@@ -382,12 +382,12 @@ Learn page - resources
 	transform: translate(calc(-100% - 30px), 0);
 }
 
-@keyframes bounce {
+@keyframes bounce-left {
 	0% {
 		transform: translate(0,0);
 	}
 	50% {
-		transform: translate(-40px, 0);
+		transform: translate(-35px, 0);
 	}
 	100% {
 		transform: translate(0,0);
@@ -395,7 +395,7 @@ Learn page - resources
 }
 
 .videos-container:hover .videos-container-inner {
-	animation: bounce .7s;
+	animation: bounce-left .6s ease-in-out;
 }
 
 .video-box {
@@ -890,6 +890,10 @@ Retreats page - Group
 	color: white;
 }
 
+#commitment h2, #commitment p {
+	color: #fff;
+}
+
 @media (min-width: 870px) {
 	.commitment-container {
 		flex-basis: 75%;
@@ -901,6 +905,90 @@ Retreats page - Group
 		flex-basis: 50%;
 	}
 }
+
+
+
+
+
+/* Testimonials */
+.testimonials-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 0 -30px;
+}
+
+.testimonial-box {
+	margin: 0 30px;
+	transition: all .3s;
+}
+
+.testimonial-content {
+	text-align: center;
+}
+
+.testimonial-image {
+	width: 300px;
+	height: 300px;
+	display: block;
+	margin: 0 auto;
+	border-radius: 8px;
+	/* animation: rotate 6s linear infinite; */
+	transition: transform .4s ease-out;
+	pointer-events: none;
+}
+
+.testimonial-box-2 .testimonial-image {
+	animation-delay: 2s;
+}
+
+.testimonial-box-3 .testimonial-image {
+	animation-delay: 4s;
+}
+
+.testimonial-box-1:hover {
+	/* background-image: linear-gradient(135deg, rgba(243, 210, 191, 0.2), rgba(142, 82, 47,0.2)); */
+}
+
+.testimonial-box-1:hover .testimonial-image {
+	box-shadow: 0 2px 8px rgba(134,84,49,0.3);
+	transform: translateX(840px);
+}
+
+.testimonial-box-3 {
+	transition: transform .6s;
+	transition-delay: 4s;
+}
+
+.testimonial-box-3:hover .testimonial-image {
+	box-shadow: 0 2px 8px rgba(134,84,49,0.3);
+	/* transform: translateX(-840px); */
+	animation: bounce .4s ease 2 alternate;
+	/* transform: translateX(-880px); */
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes bounce {
+	50% {
+		transform: translate3d(-420px, -500px, 0);
+	}
+	100% {
+		transform: translate3d(-840px, 0, 0);
+	}
+}
+
+@keyframes go-left {
+	to {
+		transform: translateX(-840px);
+	}
+}
+
+
 
 
 /*----------------------------------------------

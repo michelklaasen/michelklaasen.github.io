@@ -2,6 +2,10 @@
 Global CSS
 --------------------------------*/
 
+:root {
+	--m-header-height: 55px;
+}
+
 body {
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-family:"Open Sans", "Montserrat", sans-serif;
@@ -17,7 +21,7 @@ p {
 }
 
 section {
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 ul {
@@ -92,15 +96,6 @@ h3 {
 	text-transform: lowercase;
 }
 
-a {
-	text-decoration:none;
-}
-
-a button {
-	color:white;
-	font-size:30px;
-}
-
 .flex-container {
 	display: flex;
 	flex-flow: column nowrap;
@@ -129,155 +124,61 @@ a button {
 	margin-top: 0 !important;
 }
 
-.xscroll-container {
-	overflow: hidden;
-	cursor: move; /* fallback if grab cursor is unsupported */
-	cursor: grab;
-	cursor: -moz-grab;
-	cursor: -webkit-grab;
+a {
+	color: #0707ef;
+	text-decoration: none;
 }
 
-.xscroll-container:active {
-  cursor: grabbing;
-  cursor: -moz-grabbing;
-  cursor: -webkit-grabbing;
+a:hover:not(.tablink):not(.header-menu-item):not(.dropdown-menu-item) {
+	background: -webkit-gradient(90deg, rgba(0,125,255,1) 0%, rgba(107,0,195,1) 100%);
+	background: linear-gradient(90deg, #2129ff 0%, #5c00d6 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	text-shadow: none;
+	text-decoration: underline;
+  -webkit-text-decoration-color: #ccc;
+  text-decoration-color: #ccf;
 }
 
-/*--------------------------------
-Navigation
---------------------------------*/
-
-/* Hamburger  */
-.burger-container {
-	height: 100%;
-	width: 100%;
+::selection {
+	background-color: #7051ed;
+	color: #fff;
+	/* color: #fff; */
 }
 
-.burger-container .burger {
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
+:visited {
+	color: #0707ef;
 }
-
-.burger-container .burger .burger-line {
-	width: 32px;
-	height: 3px;
-	border-radius: 20px;
-	background-color: #222;
-	-webkit-transition: all .3s ease .1s;
-	transition: all .3s ease .1s;
-}
-
-.burger-container .burger .burger-line-middle {
-	margin: 4px 0;
-	-webkit-transition: all .15s ease .3s;
-	transition: all .15s ease .3s;
-}
-
-/* Opening the burger */
-.burger.open .burger-line-top {
-	-webkit-transform: rotateZ(45deg);
-	-ms-transform: rotateZ(45deg);
-	transform: rotateZ(45deg);
-}
-
-.burger.open .burger-line-bottom {
-	-webkit-transform: rotateZ(-45deg);
-	-ms-transform: rotateZ(-45deg);
-	transform: rotateZ(-45deg);
-}
-
-.burger.open .burger-line-middle {
-	opacity: 0;
-	margin: -3px 0;
-	-webkit-transition: all .15s ease;
-	transition: all .15s ease;
-}
-
-/* FULLSCREEN sidebar menu */
-#sidebar-nav {
-	position: fixed;
-	height: calc(100% - 90px);
-	bottom: 90px;
-	right: 0;
-	width: 50vw;
-	background: white;
-	box-shadow: 0 -10px 10px rgba(0,0,0,0.3);
-	z-index: 420420;
-	transition: .3s;
-	overflow: hidden;
-	-webkit-transform: translateX(85vw);
-	-ms-transform: translateX(85vw);
-	transform: translateX(85vw);
-}
-
-#sidebar-nav.open {
-	-webkit-transform: none;
-	-ms-transform: none;
-	transform: none;
-}
-
-#sidebar-nav .sb-container {
-	display: flex;
-	height: 100%;
-	flex-flow: column nowrap;
-	justify-content: flex-end;
-}
-
-#sidebar-nav .sb-logo-container .sb-logo {
-	height: 60px;
-	margin: 0 auto 1rem auto;
-	display: block;
-}
-
-#sidebar-nav .sb-menu-container .sb-menu-item {
-	display: flex;
-	justify-content: flex-start;
-	flex-flow: row nowrap;
-	align-items: center;
-	padding: .8em;
-}
-
-#sidebar-nav .sb-menu-container .sb-menu-item:hover {
-	background-color: #f2f2f2;
-}
-
-#sidebar-nav .sb-menu-container .sb-menu-item .sb-icon {
-	height: 2em;
-	margin-right: .75em;
-	display: inline;
-}
-
-#sidebar-nav .sb-menu-container .sb-menu-item .sb-menu-text {
-	font-size: 1rem;
-	font-weight: inherit;
-	color: #999;
-	margin: 0;
-}
-
 
 /*--------------------------------
 Top header navigation
 --------------------------------*/
 #header {
-		/* display: none; */
 		background-color: white;
-    position: relative;
+		background-color: rgba(255,255,255,0.95);
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: var(--m-header-height);
 		box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+#header .container {
+	width: 100%;
 }
 
 .desktop-header {
 	height: 100%;
 	display: none;
 }
+
 .mobile-header {
 	height: 100%;
+	position: relative;
+	z-index: 1;
 }
 
 #header-menu-container-small {
@@ -291,8 +192,12 @@ Top header navigation
 	flex: 1;
 }
 
+.header-logo-mobile-container {
+	max-height: 100%;
+}
+
 #header-logo-mobile {
-	height: 50px;
+	height: 40px;
 	display: block;
 	margin-left: auto;
 }
@@ -304,20 +209,31 @@ Top header navigation
 }
 
 #hamburger-wrapper {
+	/* display: relative; */
+	width: 70px;
+	height: 100%;
+	cursor: pointer;
+}
+
+#hamburger-inner {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
 	height: 100%;
-	cursor: pointer;
+	padding-left: 16px;
 }
 
 .hamburger-line {
 	width: 32px;
-	height: 2px;
+	height: 1px;
 	border-radius: 10px;
 	background-color: #37039f;
-	transition: transform .25s ease-out;
+	transition: transform .25s ease-out, background-color 1s;
+}
+
+.hamburger-line {
+	position: absolute;
 }
 
 .hamburger-line-top {
@@ -334,32 +250,62 @@ Top header navigation
 	transform: rotateZ(135deg) translateY(1px);
 }
 
+#hamburger-wrapper.open .hamburger-line {
+	/* background-color: #fff; for fancy overlay */
+}
+
 /* Dropdown */
 .fixed {
 	position: fixed;
+	z-index: -1;
 }
 
+
 #dropdown {
+	position: fixed;
 	pointer-events: none;
 	opacity: 0;
 	box-sizing: border-box;
-	position: fixed;
-	top: 80px;
+	top: var(--m-header-height);
 	left: 0px;
 	width: 100%;
 	z-index: 5;
 	min-height: 100px;
-	background-color: #fff;
 	animation: fade-in-down;
 	transition: .3s;
-	border-bottom: 2px solid #ddd;
-	/* border-top: 2px solid #eee; */
-	/* border: 2px solid #aaa; */
+
+	background-color: #fff;
+	/* border-bottom: 2px solid #ddd; */
+}
+
+#dropdown .container {
+	padding-left: 10px;
 }
 
 #dropdown.open {
 	pointer-events: all;
 	opacity: 1;
+}
+
+#dropdown-overlay {
+	position: fixed;
+
+	top: -150px;
+	left: -50px;
+	height: 500px;
+	width: 900px;
+	border-radius: 0 0 100% 0;
+	transform: scale(0);
+	transform-origin: 0 0;
+	/* background-color: #37039f; */
+	z-index: -1;
+	pointer-events: none;
+	transition: .4s;
+	box-shadow: 0 0 24px rgba(55, 3, 159, 0.3)
+}
+
+#dropdown-overlay.open {
+	transform: scale(1);
 }
 
 .dropdown-menu-wrapper {
@@ -373,6 +319,7 @@ Top header navigation
 	padding: 8px 0;
 	transition: .25s;
 	color: #b3b3b3;
+	/* color: #fff; */ /*For fancy overlay */
 }
 
 .dropdown-menu-item:hover {
@@ -383,39 +330,6 @@ Top header navigation
 	font-size: 14px;
 	font-family: 'Comfortaa';
 	text-transform: lowercase;
-}
-
-@-webkit-keyframes fade-in-down {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fade-in-down {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fade-in-down {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
 }
 
 /* Dextop menu */
@@ -478,6 +392,7 @@ Top header navigation
 	#header {
 		/* display: block; */
 		height: 120px;
+		position: relative;
 	}
 	.desktop-header {
 		display: block;
@@ -663,6 +578,7 @@ Horizontal tabs menu
 .tabs-container {
 	padding: 0 16px;
 	border-bottom: 1px solid #ddd;
+	margin-top: var(--m-header-height);
 }
 
 .tabs-inner {
@@ -704,6 +620,7 @@ Horizontal tabs menu
 .tablink:hover {
 	border-bottom: 1px solid #c74fff;
 	color: #c74fff;
+	text-decoration: none;
 }
 
 .page-title-wide {
@@ -771,14 +688,20 @@ Horizontal tabs menu
 	color: #333;
 }
 
-/* .tabcontent h2 {
+.tabcontent h2 {
 	color: #33302e;
 	text-align: center;
 	font-weight: 700;
 	font-family: 'Montserrat';
 	font-size: 29px;
-} */
+}
 
+/* .tabcontent */
+p {
+	font-family: 'Open Sans', sans-serif;
+	size: 17px;
+	color: #60595d;
+}
 
 @media (min-width: 480px) {
 	.tabcontent h2 {
