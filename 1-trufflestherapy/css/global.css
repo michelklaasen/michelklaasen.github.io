@@ -298,10 +298,12 @@ Top header navigation
 	transform: scale(0);
 	transform-origin: 0 0;
 	/* background-color: #37039f; */
+	background: #fff;
 	z-index: -1;
 	pointer-events: none;
 	transition: .4s;
-	box-shadow: 0 0 24px rgba(55, 3, 159, 0.3)
+	box-shadow: 0 0 24px rgba(55, 3, 159, 0.3);
+	box-shadow: 0 0 32px rgba(199, 79, 255, 0.2);
 }
 
 #dropdown-overlay.open {
@@ -549,7 +551,7 @@ Horizontal tabs menu
 
 .tabs {
 	font-family: comfortaa;
-	margin-bottom: 2rem;
+	margin-bottom: 18px;
 }
 
 .page-title-container {
@@ -647,6 +649,9 @@ Horizontal tabs menu
 }
 
 @media (min-width: 800px) {
+	.tabs {
+		margin-bottom: 88px;
+	}
 	.tabs-container {
 		width: 90%;
 		max-width: 1200px;
