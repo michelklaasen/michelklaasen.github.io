@@ -1,0 +1,15 @@
+#dropdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: var(--m-header-height);
+  background-color: steelblue;
+  transform: none;
+  border-radius: 100%;
+  transition: opacity .1s, transform .5s;
+}
+
+#dropdown-overlay.open {
+  transform: scale(10);
+}
