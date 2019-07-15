@@ -10,7 +10,8 @@
   <!-- CSS -->
   <link rel="stylesheet" type-"text/css" href="css/global.css">
   <link rel="stylesheet" type-"text/css" href="css/pages.css">
-  <link rel="stylesheet" type-"text/css" href="css/dropdown.css">
+  <!-- <link rel="stylesheet" type-"text/css" href="css/dropdown.css"> -->
+  <link rel="stylesheet" type-"text/css" href="css/dropdown2.css">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat:400,700|Open+Sans&display=swap" rel="stylesheet">
 </head>
@@ -98,10 +99,10 @@
         <h1 class="page-title-wide">Retreats</h1>
       </div>
       <div class="tabs-inner">
-        <a id="default-tab" href="#" class="tablink" onclick="openTab(event, 'Overview')">Overview</a>
+        <a href="#" class="tablink" onclick="openTab(event, 'Overview')">Overview</a>
         <a href="#" class="tablink" onclick="openTab(event, 'Group')">Group</a>
         <a href="#" class="tablink" onclick="openTab(event, 'Private')">Private</a>
-        <a href="#" class="tablink" onclick="openTab(event, 'Testimonials')">Testimonials</a>
+        <a id="default-tab" href="#" class="tablink" onclick="openTab(event, 'Testimonials')">Testimonials</a>
         <a href="#" class="tablink" onclick="openTab(event, 'Gallery')">Gallery</a>
         <a href="#" class="tablink" onclick="openTab(event, 'Press')">Press</a>
       </div>
@@ -117,7 +118,7 @@
         <div id="discover" class="flex-container">
           <div class="discover-text">
             <h2>Discover Yourself</h2>
-            <p>Check out the hover effect on <a href="#">this epic link</a> man.</p>
+            <p>Check out the hover effect on <a class="link" href="#">this epic link</a> man.</p>
             <p>Our retreats are all about you. We are here to support and guide you through the deeply transformative experience magic truffles have to offer you. It is our aim to provide you with the best and safest set & setting for your journey.</p>
           </div>
           <div class="discover-video-box">
@@ -282,6 +283,20 @@
     <div id="Testimonials" class="tabcontent">
       <div class="container">
         <h2>Testimonials</h2>
+
+        <!-- Button experiments -->
+        <div class="button-container">
+          <div class="button button1">Learn more</div>
+          <div class="button button2">Learn more</div>
+          <div class="button button3">Learn more</div>
+        </div>
+        <div class="links-container">
+          <p>This is <a href="#" class="fancy-link">some dope text</a> with some really <a href="#" class="fancy-link">dope links</a> as well.</p>
+        </div>
+        <div class="spacer"></div>
+
+
+        <h2>Kangaroo Testimonials</h2>
         <div class="testimonials-container">
           <div class="testimonial-box testimonial-box-1">
             <div class="testimonial-image-wrapper">
@@ -352,7 +367,7 @@
      var dropdownOverlay = document.getElementById("dropdown-overlay");
      dropdownOverlay.classList.toggle("open");
      var body = document.getElementById("body");
-     body.classList.toggle("fixed")
+     // body.classList.toggle("fixed")
   }
 </script>
 
